@@ -266,8 +266,6 @@
     "ESP_HTTP_CLIENT_ENABLE_HTTPS": true, 
     "ESP_TCP_KEEP_CONNECTION_WHEN_IP_CHANGES": false, 
     "ESP_TIMER_PROFILING": false, 
-    "ESP_WIFI_PASSWORD": "mypassword", 
-    "ESP_WIFI_SSID": "myssid", 
     "EVENT_LOOP_PROFILING": false, 
     "FATFS_CODEPAGE": 437, 
     "FATFS_CODEPAGE_437": true, 

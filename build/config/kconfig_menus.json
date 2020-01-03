@@ -1170,28 +1170,7 @@
         "type": "menu"
     }, 
     {
-        "children": [
-            {
-                "children": [], 
-                "depends_on": null, 
-                "help": "SSID (network name) for the example to connect to.\n", 
-                "id": "ESP_WIFI_SSID", 
-                "name": "ESP_WIFI_SSID", 
-                "range": null, 
-                "title": "WiFi SSID", 
-                "type": "string"
-            }, 
-            {
-                "children": [], 
-                "depends_on": null, 
-                "help": "WiFi password (WPA or WPA2) for the example to use.\n", 
-                "id": "ESP_WIFI_PASSWORD", 
-                "name": "ESP_WIFI_PASSWORD", 
-                "range": null, 
-                "title": "WiFi Password", 
-                "type": "string"
-            }
-        ], 
+        "children": [], 
         "depends_on": null, 
         "id": "example-configuration", 
         "title": "Example Configuration", 
