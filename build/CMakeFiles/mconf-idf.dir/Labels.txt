@@ -1,0 +1,13 @@
+# Target labels
+ mconf-idf
+# Source files and their labels
+/home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/mconf-idf
+/home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/mconf-idf.rule
+/home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/mconf-idf-complete.rule
+/home/kristian/eclipse-workspace/esp32-broadcaster/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-install.rule
+/home/kristian/eclipse-workspace/esp32-broadcaster/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-mkdir.rule
+/home/kristian/eclipse-workspace/esp32-broadcaster/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-download.rule
+/home/kristian/eclipse-workspace/esp32-broadcaster/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-update.rule
+/home/kristian/eclipse-workspace/esp32-broadcaster/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-patch.rule
+/home/kristian/eclipse-workspace/esp32-broadcaster/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-configure.rule
+/home/kristian/eclipse-workspace/esp32-broadcaster/build/mconf-idf-prefix/src/mconf-idf-stamp/mconf-idf-build.rule

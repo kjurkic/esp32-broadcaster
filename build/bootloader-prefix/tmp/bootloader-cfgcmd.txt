@@ -1,0 +1,1 @@
+cmd='/home/kristian/.espressif/tools/cmake/3.13.4/bin/cmake;-DSDKCONFIG=/home/kristian/eclipse-workspace/esp32-broadcaster/sdkconfig;-DIDF_PATH=/home/kristian/esp/esp-idf;-DSECURE_BOOT_SIGNING_KEY=/home/kristian/eclipse-workspace/esp32-broadcaster;-DEXTRA_COMPONENT_DIRS=/home/kristian/esp/esp-idf/components/bootloader;-GNinja;<SOURCE_DIR><SOURCE_SUBDIR>'

@@ -1,0 +1,18 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/home/kristian/esp/esp-idf/components/bootloader/subproject",
+    "build_dir":          "/home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader",
+    "config_file":        "/home/kristian/eclipse-workspace/esp32-broadcaster/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "v3.3.1",
+    "phy_data_partition": "",
+    "monitor_baud" : "115200",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : " /home/kristian/esp/esp-idf/components/efuse/Kconfig /home/kristian/esp/esp-idf/components/esp32/Kconfig /home/kristian/esp/esp-idf/components/log/Kconfig /home/kristian/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : " /home/kristian/esp/esp-idf/components/bootloader/Kconfig.projbuild /home/kristian/esp/esp-idf/components/esptool_py/Kconfig.projbuild /home/kristian/esp/esp-idf/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "soc", "esp32", "log", "bootloader", "spi_flash", "micro-ecc", "efuse", "bootloader_support", "main", "esptool_py", "partition_table" ],
+    "build_component_paths" : [ "/home/kristian/esp/esp-idf/components/soc", "/home/kristian/esp/esp-idf/components/esp32", "/home/kristian/esp/esp-idf/components/log", "/home/kristian/esp/esp-idf/components/bootloader", "/home/kristian/esp/esp-idf/components/spi_flash", "/home/kristian/esp/esp-idf/components/micro-ecc", "/home/kristian/esp/esp-idf/components/efuse", "/home/kristian/esp/esp-idf/components/bootloader_support", "/home/kristian/esp/esp-idf/components/bootloader/subproject/main", "/home/kristian/esp/esp-idf/components/esptool_py", "/home/kristian/esp/esp-idf/components/partition_table" ]
+}
