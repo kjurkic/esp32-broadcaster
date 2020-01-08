@@ -3,14 +3,14 @@
 /home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/list_install_components.dir
 /home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/rebuild_cache.dir
 /home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/size-components.dir
+/home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/size.dir
 /home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/dummy_main_src.dir
 /home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/mconf-idf.dir
+/home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/esp32-broadcaster.elf.dir
 /home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/ldgen_section_infos.dir
 /home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/edit_cache.dir
-/home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/size-files.dir
 /home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/gen_secure_boot_signing_key.dir
-/home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/size.dir
-/home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/app-template.elf.dir
+/home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/size-files.dir
 /home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/confserver.dir
 /home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/menuconfig.dir
 /home/kristian/eclipse-workspace/esp32-broadcaster/build/CMakeFiles/app-flash.dir

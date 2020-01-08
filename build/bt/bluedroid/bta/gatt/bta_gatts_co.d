@@ -98,14 +98,7 @@ bluedroid/bta/gatt/bta_gatts_co.o: \
  /home/kristian/esp/esp-idf/components/freertos/include/freertos/task.h \
  /home/kristian/esp/esp-idf/components/newlib/include/limits.h \
  /home/kristian/esp/esp-idf/components/freertos/include/freertos/list.h \
- /home/kristian/esp/esp-idf/components/esp32/include/esp_task.h \
- /home/kristian/esp/esp-idf/components/newlib/include/string.h \
- /home/kristian/esp/esp-idf/components/newlib/include/sys/string.h \
- /home/kristian/esp/esp-idf/components/bt/bluedroid/bta/include/bta/bta_gatts_co.h \
- /home/kristian/esp/esp-idf/components/bt/bluedroid/bta/include/bta/bta_gatt_api.h \
- /home/kristian/esp/esp-idf/components/bt/bluedroid/stack/include/stack/gatt_api.h \
- /home/kristian/esp/esp-idf/components/bt/bluedroid/stack/include/stack/gattdefs.h \
- /home/kristian/esp/esp-idf/components/bt/bluedroid/osi/include/osi/list.h
+ /home/kristian/esp/esp-idf/components/esp32/include/esp_task.h
 
 /home/kristian/esp/esp-idf/components/bt/bluedroid/bta/include/bta/bta_api.h:
 
@@ -304,18 +297,4 @@ bluedroid/bta/gatt/bta_gatts_co.o: \
 /home/kristian/esp/esp-idf/components/freertos/include/freertos/list.h:
 
 /home/kristian/esp/esp-idf/components/esp32/include/esp_task.h:
-
-/home/kristian/esp/esp-idf/components/newlib/include/string.h:
-
-/home/kristian/esp/esp-idf/components/newlib/include/sys/string.h:
-
-/home/kristian/esp/esp-idf/components/bt/bluedroid/bta/include/bta/bta_gatts_co.h:
-
-/home/kristian/esp/esp-idf/components/bt/bluedroid/bta/include/bta/bta_gatt_api.h:
-
-/home/kristian/esp/esp-idf/components/bt/bluedroid/stack/include/stack/gatt_api.h:
-
-/home/kristian/esp/esp-idf/components/bt/bluedroid/stack/include/stack/gattdefs.h:
-
-/home/kristian/esp/esp-idf/components/bt/bluedroid/osi/include/osi/list.h:
 /home/kristian/esp/esp-idf/components/bt/bluedroid/bta/gatt/bta_gatts_co.c:

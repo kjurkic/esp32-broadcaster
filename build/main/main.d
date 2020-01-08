@@ -1,4 +1,5 @@
 main.o: /home/kristian/eclipse-workspace/esp32-broadcaster/main/main.c \
+ /home/kristian/eclipse-workspace/esp32-broadcaster/main/ble.h \
  /home/kristian/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h \
  /home/kristian/esp/esp-idf/components/newlib/include/sys/reent.h \
  /home/kristian/esp/esp-idf/components/newlib/include/_ansi.h \
@@ -76,11 +77,10 @@ main.o: /home/kristian/eclipse-workspace/esp32-broadcaster/main/main.c \
  /home/kristian/esp/esp-idf/components/esp32/include/rom/ets_sys.h \
  /home/kristian/esp/esp-idf/components/freertos/include/freertos/xtensa_api.h \
  /home/kristian/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h \
- /home/kristian/esp/esp-idf/components/esp32/include/esp_wifi.h \
- /home/kristian/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
- /home/kristian/esp/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h \
- /home/kristian/esp/esp-idf/components/esp32/include/rom/queue.h \
- /home/kristian/esp/esp-idf/components/esp32/include/esp_interface.h \
+ /home/kristian/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
+ /home/kristian/esp/esp-idf/components/nvs_flash/include/nvs.h \
+ /home/kristian/esp/esp-idf/components/spi_flash/include/esp_partition.h \
+ /home/kristian/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
  /home/kristian/esp/esp-idf/components/esp_event/include/esp_event.h \
  /home/kristian/esp/esp-idf/components/freertos/include/freertos/task.h \
  /home/kristian/esp/esp-idf/components/newlib/include/limits.h \
@@ -90,6 +90,10 @@ main.o: /home/kristian/eclipse-workspace/esp32-broadcaster/main/main.c \
  /home/kristian/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /home/kristian/esp/esp-idf/components/esp_event/include/esp_event_base.h \
  /home/kristian/esp/esp-idf/components/esp32/include/esp_event_legacy.h \
+ /home/kristian/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
+ /home/kristian/esp/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h \
+ /home/kristian/esp/esp-idf/components/esp32/include/rom/queue.h \
+ /home/kristian/esp/esp-idf/components/esp32/include/esp_interface.h \
  /home/kristian/esp/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h \
  /home/kristian/esp/esp-idf/components/esp32/include/esp_wifi_types.h \
  /home/kristian/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip_addr.h \
@@ -125,21 +129,20 @@ main.o: /home/kristian/eclipse-workspace/esp32-broadcaster/main/main.c \
  /home/kristian/esp/esp-idf/components/lwip/lwip/src/include/lwip/ip6_addr.h \
  /home/kristian/esp/esp-idf/components/lwip/lwip/src/include/lwip/def.h \
  /home/kristian/esp/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h \
- /home/kristian/esp/esp-idf/components/esp32/include/esp_private/esp_wifi_private.h \
- /home/kristian/esp/esp-idf/components/esp32/include/esp_wifi_crypto_types.h \
- /home/kristian/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h \
  /home/kristian/esp/esp-idf/components/esp32/include/esp_event_loop.h \
- /home/kristian/esp/esp-idf/components/nvs_flash/include/nvs_flash.h \
- /home/kristian/esp/esp-idf/components/nvs_flash/include/nvs.h \
- /home/kristian/esp/esp-idf/components/spi_flash/include/esp_partition.h \
- /home/kristian/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h \
- /home/kristian/eclipse-workspace/esp32-broadcaster/main/ble.h \
+ /home/kristian/esp/esp-idf/components/log/include/esp_log.h \
+ /home/kristian/esp/esp-idf/components/log/include/esp_log_internal.h \
  /home/kristian/esp/esp-idf/components/bt/include/esp_bt.h \
  /home/kristian/esp/esp-idf/components/bt/bluedroid/api/include/api/esp_bt_defs.h \
  /home/kristian/esp/esp-idf/components/bt/bluedroid/api/include/api/esp_bt_main.h \
  /home/kristian/esp/esp-idf/components/bt/bluedroid/api/include/api/esp_bt_device.h \
  /home/kristian/esp/esp-idf/components/bt/bluedroid/api/include/api/esp_bt_defs.h \
- /home/kristian/esp/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h
+ /home/kristian/esp/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h \
+ /home/kristian/esp/esp-idf/components/newlib/include/string.h \
+ /home/kristian/esp/esp-idf/components/newlib/include/sys/string.h \
+ /home/kristian/eclipse-workspace/esp32-broadcaster/main/eddystone.h
+
+/home/kristian/eclipse-workspace/esp32-broadcaster/main/ble.h:
 
 /home/kristian/esp/esp-idf/components/freertos/include/freertos/FreeRTOS.h:
 
@@ -295,15 +298,13 @@ main.o: /home/kristian/eclipse-workspace/esp32-broadcaster/main/main.c \
 
 /home/kristian/esp/esp-idf/components/soc/esp32/include/soc/touch_channel.h:
 
-/home/kristian/esp/esp-idf/components/esp32/include/esp_wifi.h:
+/home/kristian/esp/esp-idf/components/nvs_flash/include/nvs_flash.h:
 
-/home/kristian/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
+/home/kristian/esp/esp-idf/components/nvs_flash/include/nvs.h:
 
-/home/kristian/esp/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h:
+/home/kristian/esp/esp-idf/components/spi_flash/include/esp_partition.h:
 
-/home/kristian/esp/esp-idf/components/esp32/include/rom/queue.h:
-
-/home/kristian/esp/esp-idf/components/esp32/include/esp_interface.h:
+/home/kristian/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
 
 /home/kristian/esp/esp-idf/components/esp_event/include/esp_event.h:
 
@@ -322,6 +323,14 @@ main.o: /home/kristian/eclipse-workspace/esp32-broadcaster/main/main.c \
 /home/kristian/esp/esp-idf/components/esp_event/include/esp_event_base.h:
 
 /home/kristian/esp/esp-idf/components/esp32/include/esp_event_legacy.h:
+
+/home/kristian/esp/esp-idf/components/esp32/include/esp_wifi_types.h:
+
+/home/kristian/esp/esp-idf/components/esp32/include/esp_private/esp_wifi_types_private.h:
+
+/home/kristian/esp/esp-idf/components/esp32/include/rom/queue.h:
+
+/home/kristian/esp/esp-idf/components/esp32/include/esp_interface.h:
 
 /home/kristian/esp/esp-idf/components/tcpip_adapter/include/tcpip_adapter.h:
 
@@ -393,23 +402,11 @@ main.o: /home/kristian/eclipse-workspace/esp32-broadcaster/main/main.c \
 
 /home/kristian/esp/esp-idf/components/lwip/include/apps/dhcpserver/dhcpserver.h:
 
-/home/kristian/esp/esp-idf/components/esp32/include/esp_private/esp_wifi_private.h:
-
-/home/kristian/esp/esp-idf/components/esp32/include/esp_wifi_crypto_types.h:
-
-/home/kristian/esp/esp-idf/components/esp32/include/esp_wifi_os_adapter.h:
-
 /home/kristian/esp/esp-idf/components/esp32/include/esp_event_loop.h:
 
-/home/kristian/esp/esp-idf/components/nvs_flash/include/nvs_flash.h:
+/home/kristian/esp/esp-idf/components/log/include/esp_log.h:
 
-/home/kristian/esp/esp-idf/components/nvs_flash/include/nvs.h:
-
-/home/kristian/esp/esp-idf/components/spi_flash/include/esp_partition.h:
-
-/home/kristian/esp/esp-idf/components/spi_flash/include/esp_spi_flash.h:
-
-/home/kristian/eclipse-workspace/esp32-broadcaster/main/ble.h:
+/home/kristian/esp/esp-idf/components/log/include/esp_log_internal.h:
 
 /home/kristian/esp/esp-idf/components/bt/include/esp_bt.h:
 
@@ -422,4 +419,10 @@ main.o: /home/kristian/eclipse-workspace/esp32-broadcaster/main/main.c \
 /home/kristian/esp/esp-idf/components/bt/bluedroid/api/include/api/esp_bt_defs.h:
 
 /home/kristian/esp/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h:
+
+/home/kristian/esp/esp-idf/components/newlib/include/string.h:
+
+/home/kristian/esp/esp-idf/components/newlib/include/sys/string.h:
+
+/home/kristian/eclipse-workspace/esp32-broadcaster/main/eddystone.h:
 /home/kristian/eclipse-workspace/esp32-broadcaster/main/./main.c:

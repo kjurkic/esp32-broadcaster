@@ -420,7 +420,7 @@ LOAD /home/kristian/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/l
 END GROUP
 
 .iram_loader.text
-                0x0000000040078000     0x2f25
+                0x0000000040078000     0x2f29
                 0x0000000040078000                . = ALIGN (0x10)
                 0x0000000040078000                _loader_text_start = ABSOLUTE (.)
  *(.stub .gnu.warning .gnu.linkonce.literal.* .gnu.linkonce.t.*.literal .gnu.linkonce.t.*)
@@ -513,497 +513,497 @@ END GROUP
                 0x0000000040078220        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x18 (size before relaxing)
  .literal.bootloader_utility_load_partition_table
-                0x0000000040078224       0x44 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078224       0x48 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x90 (size before relaxing)
  .literal.bootloader_utility_get_selected_boot_partition
-                0x0000000040078268       0x10 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000004007826c       0x10 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x50 (size before relaxing)
  .literal.bootloader_reset
-                0x0000000040078278        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000004007827c        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x14 (size before relaxing)
  .literal.bootloader_utility_load_boot_image
-                0x0000000040078280        0xc /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040078284        0xc /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x74 (size before relaxing)
  .literal.bootloader_sha256_start
-                0x000000004007828c        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040078290        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .literal.bootloader_sha256_data
-                0x0000000040078294       0x20 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040078298       0x20 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0x30 (size before relaxing)
  .literal.bootloader_sha256_finish
-                0x00000000400782b4       0x18 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x00000000400782b8       0x18 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0x4c (size before relaxing)
  .literal.should_map
-                0x00000000400782cc        0x0 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400782d0        0x0 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x10 (size before relaxing)
  .literal.verify_segment_header
-                0x00000000400782cc       0x14 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400782d0       0x14 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x28 (size before relaxing)
  .literal.verify_checksum
-                0x00000000400782e0        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400782e4        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x1c (size before relaxing)
  .literal.verify_image_header
-                0x00000000400782e4        0xc /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400782e8        0xc /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x30 (size before relaxing)
  .literal.process_segment_data
-                0x00000000400782f0        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400782f4        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x24 (size before relaxing)
  .literal.debug_log_hash
-                0x00000000400782f8        0x0 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400782fc        0x0 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                           0x4 (size before relaxing)
  .literal.verify_simple_hash
-                0x00000000400782f8       0x10 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x00000000400782fc       0x10 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x3c (size before relaxing)
  .literal.should_load
-                0x0000000040078308       0x14 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007830c       0x14 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x1c (size before relaxing)
  .literal.process_segment
-                0x000000004007831c       0x2c /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078320       0x2c /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x78 (size before relaxing)
  .literal.image_load
-                0x0000000040078348       0x14 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007834c       0x14 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x88 (size before relaxing)
  .literal.bootloader_load_image
-                0x000000004007835c        0x0 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040078360        0x0 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                           0x4 (size before relaxing)
  .literal.esp_partition_table_verify
-                0x000000004007835c       0x2c /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x0000000040078360       0x2c /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                          0x5c (size before relaxing)
  .literal.esp_rom_spiflash_read_status
-                0x0000000040078388        0xc /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007838c        0xc /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x14 (size before relaxing)
  .literal.esp_rom_spiflash_wait_idle
-                0x0000000040078394        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x0000000040078398        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                           0xc (size before relaxing)
  .literal.esp_rom_spiflash_erase_sector_internal
-                0x000000004007839c        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783a0        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x18 (size before relaxing)
  .literal.esp_rom_spiflash_read_data
-                0x00000000400783a0        0xc /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783a4        0xc /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x18 (size before relaxing)
  .literal.esp_rom_spiflash_enable_write
-                0x00000000400783ac        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783b0        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x10 (size before relaxing)
  .literal.esp_rom_spiflash_program_page_internal
-                0x00000000400783b0        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783b4        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x24 (size before relaxing)
  .literal.esp_rom_spiflash_read_statushigh
-                0x00000000400783b4        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783b8        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                           0xc (size before relaxing)
  .literal.esp_rom_spiflash_write_status
-                0x00000000400783b8        0x0 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783bc        0x0 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x14 (size before relaxing)
  .literal.esp_rom_spiflash_unlock
-                0x00000000400783b8        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783bc        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x28 (size before relaxing)
  .literal.esp_rom_spiflash_erase_sector
-                0x00000000400783c0        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783c4        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x20 (size before relaxing)
  .literal.esp_rom_spiflash_write
-                0x00000000400783c8        0x0 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783cc        0x0 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x28 (size before relaxing)
  .literal.esp_rom_spiflash_write_encrypted
-                0x00000000400783c8        0xc /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783cc        0xc /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x10 (size before relaxing)
  .literal.esp_rom_spiflash_read
-                0x00000000400783d4       0x2c /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x00000000400783d8       0x2c /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x5c (size before relaxing)
  .literal.rtc_wdt_get_protect_status
-                0x0000000040078400        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040078404        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .literal.rtc_wdt_protect_off
-                0x0000000040078408        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007840c        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                           0x8 (size before relaxing)
  .literal.rtc_wdt_protect_on
-                0x000000004007840c        0x0 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040078410        0x0 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                           0x4 (size before relaxing)
  .literal.rtc_wdt_enable
-                0x000000004007840c        0xc /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040078410        0xc /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x10 (size before relaxing)
  .literal.rtc_wdt_set_time
-                0x0000000040078418       0x18 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007841c       0x18 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x20 (size before relaxing)
  .literal.rtc_wdt_set_stage
-                0x0000000040078430       0x10 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040078434       0x10 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x14 (size before relaxing)
  .literal.rtc_wdt_disable
-                0x0000000040078440        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040078444        0x4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x2c (size before relaxing)
  .literal.rtc_wdt_set_length_of_reset_signal
-                0x0000000040078444        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x0000000040078448        0x8 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                           0xc (size before relaxing)
- .iram1.11      0x000000004007844c       0x14 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+ .iram1.11      0x0000000040078450       0x14 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
                                          0x1c (size before relaxing)
- .iram1.0       0x0000000040078460       0x6e /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config.o)
-                0x0000000040078460                bootloader_flash_cs_timing_config
- *fill*         0x00000000400784ce        0x2 
- .iram1.2       0x00000000400784d0      0x23a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config.o)
-                0x00000000400784d0                bootloader_flash_gpio_config
- *fill*         0x000000004007870a        0x2 
- .iram1.3       0x000000004007870c       0xab /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config.o)
-                0x000000004007870c                bootloader_flash_dummy_config
- *fill*         0x00000000400787b7        0x1 
- .iram1.3       0x00000000400787b8        0xe /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(cpu_util.o)
-                0x00000000400787b8                esp_cpu_in_ocd_debug_mode
- *fill*         0x00000000400787c6        0x0 
- *fill*         0x00000000400787c6        0x0 
- *fill*         0x00000000400787c6        0x0 
+ .iram1.0       0x0000000040078464       0x6e /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config.o)
+                0x0000000040078464                bootloader_flash_cs_timing_config
+ *fill*         0x00000000400784d2        0x2 
+ .iram1.2       0x00000000400784d4      0x23a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config.o)
+                0x00000000400784d4                bootloader_flash_gpio_config
+ *fill*         0x000000004007870e        0x2 
+ .iram1.3       0x0000000040078710       0xab /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash_config.o)
+                0x0000000040078710                bootloader_flash_dummy_config
+ *fill*         0x00000000400787bb        0x1 
+ .iram1.3       0x00000000400787bc        0xe /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(cpu_util.o)
+                0x00000000400787bc                esp_cpu_in_ocd_debug_mode
+ *fill*         0x00000000400787ca        0x0 
+ *fill*         0x00000000400787ca        0x0 
+ *fill*         0x00000000400787ca        0x0 
  *liblog.a:(.literal .text .literal.* .text.*)
- *fill*         0x00000000400787c6        0x2 
+ *fill*         0x00000000400787ca        0x2 
  .text.esp_log_early_timestamp
-                0x00000000400787c8       0x1f /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/log/liblog.a(log.o)
-                0x00000000400787c8                esp_log_timestamp
-                0x00000000400787c8                esp_log_early_timestamp
- *fill*         0x00000000400787e7        0x0 
+                0x00000000400787cc       0x1f /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/log/liblog.a(log.o)
+                0x00000000400787cc                esp_log_timestamp
+                0x00000000400787cc                esp_log_early_timestamp
+ *fill*         0x00000000400787eb        0x0 
  *libgcc.a:(.literal .text .literal.* .text.*)
- *fill*         0x00000000400787e7        0x1 
- .text          0x00000000400787e8       0x26 /home/kristian/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
-                0x00000000400787e8                __bswapsi2
- *fill*         0x000000004007880e        0x0 
- *fill*         0x000000004007880e        0x2 
- .text          0x0000000040078810      0x281 /home/kristian/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
-                0x0000000040078810                __udivdi3
+ *fill*         0x00000000400787eb        0x1 
+ .text          0x00000000400787ec       0x26 /home/kristian/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
+                0x00000000400787ec                __bswapsi2
+ *fill*         0x0000000040078812        0x0 
+ *fill*         0x0000000040078812        0x2 
+ .text          0x0000000040078814      0x281 /home/kristian/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
+                0x0000000040078814                __udivdi3
  *libbootloader_support.a:bootloader_common.*(.literal .text .literal.* .text.*)
- *fill*         0x0000000040078a91        0x3 
+ *fill*         0x0000000040078a95        0x3 
  .text.bootloader_common_ota_select_crc
-                0x0000000040078a94       0x14 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                0x0000000040078a94                bootloader_common_ota_select_crc
+                0x0000000040078a98       0x14 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078a98                bootloader_common_ota_select_crc
  .text.bootloader_common_ota_select_valid
-                0x0000000040078aa8       0x24 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078aac       0x24 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                          0x28 (size before relaxing)
-                0x0000000040078aa8                bootloader_common_ota_select_valid
+                0x0000000040078aac                bootloader_common_ota_select_valid
  .text.bootloader_common_get_active_otadata
-                0x0000000040078acc       0x28 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078ad0       0x28 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                          0x30 (size before relaxing)
-                0x0000000040078acc                bootloader_common_get_active_otadata
+                0x0000000040078ad0                bootloader_common_get_active_otadata
  .text.bootloader_common_vddsdio_configure
-                0x0000000040078af4       0x33 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078af8       0x33 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                          0x37 (size before relaxing)
-                0x0000000040078af4                bootloader_common_vddsdio_configure
- *fill*         0x0000000040078b27        0x1 
+                0x0000000040078af8                bootloader_common_vddsdio_configure
+ *fill*         0x0000000040078b2b        0x1 
  .text.bootloader_common_get_chip_revision
-                0x0000000040078b28       0x55 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                0x0000000040078b28                bootloader_common_get_chip_revision
- *fill*         0x0000000040078b7d        0x3 
+                0x0000000040078b2c       0x55 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078b2c                bootloader_common_get_chip_revision
+ *fill*         0x0000000040078b81        0x3 
  .text.bootloader_common_check_chip_validity
-                0x0000000040078b80       0x90 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078b84       0x90 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
                                          0x94 (size before relaxing)
-                0x0000000040078b80                bootloader_common_check_chip_validity
- *fill*         0x0000000040078c10        0x0 
+                0x0000000040078b84                bootloader_common_check_chip_validity
+ *fill*         0x0000000040078c14        0x0 
  .text.bootloader_common_ota_select_invalid
-                0x0000000040078c10       0x20 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                0x0000000040078c10                bootloader_common_ota_select_invalid
+                0x0000000040078c14       0x20 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078c14                bootloader_common_ota_select_invalid
  .text.bootloader_common_select_otadata
-                0x0000000040078c30       0x62 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
-                0x0000000040078c30                bootloader_common_select_otadata
- *fill*         0x0000000040078c92        0x0 
- *fill*         0x0000000040078c92        0x0 
- *fill*         0x0000000040078c92        0x0 
+                0x0000000040078c34       0x62 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o)
+                0x0000000040078c34                bootloader_common_select_otadata
+ *fill*         0x0000000040078c96        0x0 
+ *fill*         0x0000000040078c96        0x0 
+ *fill*         0x0000000040078c96        0x0 
  *libbootloader_support.a:bootloader_flash.*(.literal .text .literal.* .text.*)
- *fill*         0x0000000040078c92        0x2 
+ *fill*         0x0000000040078c96        0x2 
  .text.spi_to_esp_err
-                0x0000000040078c94       0x22 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- *fill*         0x0000000040078cb6        0x2 
+                0x0000000040078c98       0x22 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ *fill*         0x0000000040078cba        0x2 
  .text.bootloader_flash_read_allow_decrypt
-                0x0000000040078cb8       0x97 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078cbc       0x97 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x9b (size before relaxing)
- *fill*         0x0000000040078d4f        0x1 
+ *fill*         0x0000000040078d53        0x1 
  .text.bootloader_flash_read_no_decrypt
-                0x0000000040078d50       0x32 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078d54       0x32 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x36 (size before relaxing)
- *fill*         0x0000000040078d82        0x2 
+ *fill*         0x0000000040078d86        0x2 
  .text.bootloader_mmap
-                0x0000000040078d84       0xb6 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078d88       0xb6 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0xbe (size before relaxing)
-                0x0000000040078d84                bootloader_mmap
- *fill*         0x0000000040078e3a        0x2 
+                0x0000000040078d88                bootloader_mmap
+ *fill*         0x0000000040078e3e        0x2 
  .text.bootloader_munmap
-                0x0000000040078e3c       0x36 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x0000000040078e3c                bootloader_munmap
- *fill*         0x0000000040078e72        0x2 
+                0x0000000040078e40       0x36 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078e40                bootloader_munmap
+ *fill*         0x0000000040078e76        0x2 
  .text.bootloader_flash_read
-                0x0000000040078e74       0x86 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x0000000040078e74                bootloader_flash_read
- *fill*         0x0000000040078efa        0x2 
+                0x0000000040078e78       0x86 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078e78                bootloader_flash_read
+ *fill*         0x0000000040078efe        0x2 
  .text.bootloader_flash_write
-                0x0000000040078efc       0xa2 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078f00       0xa2 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0xb6 (size before relaxing)
-                0x0000000040078efc                bootloader_flash_write
- *fill*         0x0000000040078f9e        0x2 
+                0x0000000040078f00                bootloader_flash_write
+ *fill*         0x0000000040078fa2        0x2 
  .text.bootloader_flash_erase_sector
-                0x0000000040078fa0       0x12 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078fa4       0x12 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
                                          0x16 (size before relaxing)
-                0x0000000040078fa0                bootloader_flash_erase_sector
- *fill*         0x0000000040078fb2        0x0 
- *fill*         0x0000000040078fb2        0x0 
- *fill*         0x0000000040078fb2        0x2 
+                0x0000000040078fa4                bootloader_flash_erase_sector
+ *fill*         0x0000000040078fb6        0x0 
+ *fill*         0x0000000040078fb6        0x0 
+ *fill*         0x0000000040078fb6        0x2 
  .text.bootloader_mmap_get_free_pages
-                0x0000000040078fb4        0x7 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
-                0x0000000040078fb4                bootloader_mmap_get_free_pages
- *fill*         0x0000000040078fbb        0x0 
- *fill*         0x0000000040078fbb        0x0 
- *fill*         0x0000000040078fbb        0x0 
- *fill*         0x0000000040078fbb        0x0 
- *fill*         0x0000000040078fbb        0x0 
+                0x0000000040078fb8        0x7 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+                0x0000000040078fb8                bootloader_mmap_get_free_pages
+ *fill*         0x0000000040078fbf        0x0 
+ *fill*         0x0000000040078fbf        0x0 
+ *fill*         0x0000000040078fbf        0x0 
+ *fill*         0x0000000040078fbf        0x0 
+ *fill*         0x0000000040078fbf        0x0 
  *libbootloader_support.a:bootloader_random.*(.literal .text .literal.* .text.*)
- *fill*         0x0000000040078fbb        0x1 
+ *fill*         0x0000000040078fbf        0x1 
  .text.bootloader_fill_random
-                0x0000000040078fbc       0x6a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040078fc0       0x6a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
                                          0x6e (size before relaxing)
-                0x0000000040078fbc                bootloader_fill_random
- *fill*         0x0000000040079026        0x2 
+                0x0000000040078fc0                bootloader_fill_random
+ *fill*         0x000000004007902a        0x2 
  .text.bootloader_random_enable
-                0x0000000040079028      0x1d5 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                0x0000000040079028                bootloader_random_enable
- *fill*         0x00000000400791fd        0x3 
+                0x000000004007902c      0x1d5 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x000000004007902c                bootloader_random_enable
+ *fill*         0x0000000040079201        0x3 
  .text.bootloader_random_disable
-                0x0000000040079200      0x13a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
-                0x0000000040079200                bootloader_random_disable
- *fill*         0x000000004007933a        0x0 
- *fill*         0x000000004007933a        0x0 
- *fill*         0x000000004007933a        0x0 
+                0x0000000040079204      0x13a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+                0x0000000040079204                bootloader_random_disable
+ *fill*         0x000000004007933e        0x0 
+ *fill*         0x000000004007933e        0x0 
+ *fill*         0x000000004007933e        0x0 
  *libbootloader_support.a:bootloader_utility.*(.literal .text .literal.* .text.*)
- *fill*         0x000000004007933a        0x2 
+ *fill*         0x000000004007933e        0x2 
  .text.log_invalid_app_partition
-                0x000000004007933c       0x57 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079340       0x57 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x5b (size before relaxing)
- *fill*         0x0000000040079393        0x1 
+ *fill*         0x0000000040079397        0x1 
  .text.read_otadata
-                0x0000000040079394       0x7a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079398       0x7a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x7e (size before relaxing)
- *fill*         0x000000004007940e        0x2 
+ *fill*         0x0000000040079412        0x2 
  .text.write_otadata
-                0x0000000040079410       0x38 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079414       0x38 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x3c (size before relaxing)
  .text.set_actual_ota_seq
-                0x0000000040079448       0x70 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000004007944c       0x70 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x74 (size before relaxing)
  .text.try_load_partition
-                0x00000000400794b8       0x31 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400794bc       0x31 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x35 (size before relaxing)
- *fill*         0x00000000400794e9        0x3 
+ *fill*         0x00000000400794ed        0x3 
  .text.set_cache_and_start_app
-                0x00000000400794ec       0xda /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- *fill*         0x00000000400795c6        0x2 
+                0x00000000400794f0       0xda /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ *fill*         0x00000000400795ca        0x2 
  .text.unpack_load_app
-                0x00000000400795c8       0xb0 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400795cc       0xb0 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0xb4 (size before relaxing)
  .text.load_image
-                0x0000000040079678       0x1e /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000004007967c       0x1e /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0x26 (size before relaxing)
- *fill*         0x0000000040079696        0x2 
+ *fill*         0x000000004007969a        0x2 
  .text.bootloader_utility_load_partition_table
-                0x0000000040079698      0x16c /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000004007969c      0x16c /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x180 (size before relaxing)
-                0x0000000040079698                bootloader_utility_load_partition_table
+                0x000000004007969c                bootloader_utility_load_partition_table
  .text.bootloader_utility_get_selected_boot_partition
-                0x0000000040079804       0xea /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079808       0xea /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                          0xfa (size before relaxing)
-                0x0000000040079804                bootloader_utility_get_selected_boot_partition
- *fill*         0x00000000400798ee        0x2 
+                0x0000000040079808                bootloader_utility_get_selected_boot_partition
+ *fill*         0x00000000400798f2        0x2 
  .text.bootloader_reset
-                0x00000000400798f0       0x2b /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
-                0x00000000400798f0                bootloader_reset
- *fill*         0x000000004007991b        0x1 
+                0x00000000400798f4       0x2b /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x00000000400798f4                bootloader_reset
+ *fill*         0x000000004007991f        0x1 
  .text.bootloader_utility_load_boot_image
-                0x000000004007991c       0xfb /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079920       0xfb /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x127 (size before relaxing)
-                0x000000004007991c                bootloader_utility_load_boot_image
- *fill*         0x0000000040079a17        0x1 
+                0x0000000040079920                bootloader_utility_load_boot_image
+ *fill*         0x0000000040079a1b        0x1 
  .text.index_to_partition
-                0x0000000040079a18       0x48 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x0000000040079a1c       0x48 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
  .text.check_anti_rollback
-                0x0000000040079a60        0x7 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
- *fill*         0x0000000040079a67        0x0 
- *fill*         0x0000000040079a67        0x0 
- *fill*         0x0000000040079a67        0x0 
- *fill*         0x0000000040079a67        0x0 
- *fill*         0x0000000040079a67        0x0 
- *fill*         0x0000000040079a67        0x0 
- *fill*         0x0000000040079a67        0x0 
- *fill*         0x0000000040079a67        0x0 
+                0x0000000040079a64        0x7 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+ *fill*         0x0000000040079a6b        0x0 
+ *fill*         0x0000000040079a6b        0x0 
+ *fill*         0x0000000040079a6b        0x0 
+ *fill*         0x0000000040079a6b        0x0 
+ *fill*         0x0000000040079a6b        0x0 
+ *fill*         0x0000000040079a6b        0x0 
+ *fill*         0x0000000040079a6b        0x0 
+ *fill*         0x0000000040079a6b        0x0 
  *libbootloader_support.a:bootloader_sha.*(.literal .text .literal.* .text.*)
- *fill*         0x0000000040079a67        0x1 
+ *fill*         0x0000000040079a6b        0x1 
  .text.bootloader_sha256_start
-                0x0000000040079a68       0x12 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
-                0x0000000040079a68                bootloader_sha256_start
- *fill*         0x0000000040079a7a        0x2 
+                0x0000000040079a6c       0x12 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040079a6c                bootloader_sha256_start
+ *fill*         0x0000000040079a7e        0x2 
  .text.bootloader_sha256_data
-                0x0000000040079a7c       0xa1 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040079a80       0xa1 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0xa9 (size before relaxing)
-                0x0000000040079a7c                bootloader_sha256_data
- *fill*         0x0000000040079b1d        0x3 
+                0x0000000040079a80                bootloader_sha256_data
+ *fill*         0x0000000040079b21        0x3 
  .text.bootloader_sha256_finish
-                0x0000000040079b20       0xdc /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040079b24       0xdc /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
                                          0xf0 (size before relaxing)
-                0x0000000040079b20                bootloader_sha256_finish
- *fill*         0x0000000040079bfc        0x0 
- *fill*         0x0000000040079bfc        0x0 
- *fill*         0x0000000040079bfc        0x0 
+                0x0000000040079b24                bootloader_sha256_finish
+ *fill*         0x0000000040079c00        0x0 
+ *fill*         0x0000000040079c00        0x0 
+ *fill*         0x0000000040079c00        0x0 
  .text.bootloader_sha256_hex_to_str
-                0x0000000040079bfc       0x72 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
-                0x0000000040079bfc                bootloader_sha256_hex_to_str
+                0x0000000040079c00       0x72 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x0000000040079c00                bootloader_sha256_hex_to_str
  *libbootloader_support.a:esp_image_format.*(.literal .text .literal.* .text.*)
- *fill*         0x0000000040079c6e        0x2 
+ *fill*         0x0000000040079c72        0x2 
  .text.should_map
-                0x0000000040079c70       0x30 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079c74       0x30 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
  .text.verify_segment_header
-                0x0000000040079ca0       0x71 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079ca4       0x71 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x79 (size before relaxing)
- *fill*         0x0000000040079d11        0x3 
+ *fill*         0x0000000040079d15        0x3 
  .text.verify_checksum
-                0x0000000040079d14       0x8b /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079d18       0x8b /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x8f (size before relaxing)
- *fill*         0x0000000040079d9f        0x1 
+ *fill*         0x0000000040079da3        0x1 
  .text.verify_image_header
-                0x0000000040079da0       0x84 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079da4       0x84 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x90 (size before relaxing)
  .text.process_segment_data
-                0x0000000040079e24       0xa4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079e28       0xa4 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0xb0 (size before relaxing)
  .text.debug_log_hash
-                0x0000000040079ec8       0x16 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
- *fill*         0x0000000040079ede        0x2 
+                0x0000000040079ecc       0x16 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+ *fill*         0x0000000040079ee2        0x2 
  .text.verify_simple_hash
-                0x0000000040079ee0       0x69 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079ee4       0x69 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x80 (size before relaxing)
- *fill*         0x0000000040079f49        0x3 
+ *fill*         0x0000000040079f4d        0x3 
  .text.should_load
-                0x0000000040079f4c       0x4c /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079f50       0x4c /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x50 (size before relaxing)
  .text.process_segment
-                0x0000000040079f98      0x1a6 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x0000000040079f9c      0x1a6 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x1b6 (size before relaxing)
- *fill*         0x000000004007a13e        0x2 
+ *fill*         0x000000004007a142        0x2 
  .text.image_load
-                0x000000004007a140      0x28a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007a144      0x28a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x2aa (size before relaxing)
- *fill*         0x000000004007a3ca        0x2 
+ *fill*         0x000000004007a3ce        0x2 
  .text.bootloader_load_image
-                0x000000004007a3cc       0x10 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000004007a3d0       0x10 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                          0x14 (size before relaxing)
-                0x000000004007a3cc                bootloader_load_image
- *fill*         0x000000004007a3dc        0x0 
- *fill*         0x000000004007a3dc        0x0 
- *fill*         0x000000004007a3dc        0x0 
- *fill*         0x000000004007a3dc        0x0 
- *fill*         0x000000004007a3dc        0x0 
- *fill*         0x000000004007a3dc        0x0 
+                0x000000004007a3d0                bootloader_load_image
+ *fill*         0x000000004007a3e0        0x0 
+ *fill*         0x000000004007a3e0        0x0 
+ *fill*         0x000000004007a3e0        0x0 
+ *fill*         0x000000004007a3e0        0x0 
+ *fill*         0x000000004007a3e0        0x0 
+ *fill*         0x000000004007a3e0        0x0 
  *libbootloader_support.a:flash_encrypt.*(.literal .text .literal.* .text.*)
  *libbootloader_support.a:flash_partitions.*(.literal .text .literal.* .text.*)
  .text.esp_partition_table_verify
-                0x000000004007a3dc      0x143 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+                0x000000004007a3e0      0x143 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
                                         0x14f (size before relaxing)
-                0x000000004007a3dc                esp_partition_table_verify
+                0x000000004007a3e0                esp_partition_table_verify
  *libbootloader_support.a:secure_boot.*(.literal .text .literal.* .text.*)
  *libbootloader_support.a:secure_boot_signatures.*(.literal .text .literal.* .text.*)
  *libmicro-ecc.a:*.*(.literal .text .literal.* .text.*)
  *libspi_flash.a:*.*(.literal .text .literal.* .text.*)
- *fill*         0x000000004007a51f        0x1 
+ *fill*         0x000000004007a523        0x1 
  .text.esp_rom_spiflash_read_status
-                0x000000004007a520       0x61 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x000000004007a520                esp_rom_spiflash_read_status
- *fill*         0x000000004007a581        0x3 
+                0x000000004007a524       0x61 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a524                esp_rom_spiflash_read_status
+ *fill*         0x000000004007a585        0x3 
  .text.esp_rom_spiflash_wait_idle
-                0x000000004007a584       0x32 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x000000004007a584                esp_rom_spiflash_wait_idle
- *fill*         0x000000004007a5b6        0x2 
+                0x000000004007a588       0x32 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a588                esp_rom_spiflash_wait_idle
+ *fill*         0x000000004007a5ba        0x2 
  .text.esp_rom_spiflash_erase_sector_internal
-                0x000000004007a5b8       0x44 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a5bc       0x44 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
  .text.esp_rom_spiflash_read_data
-                0x000000004007a5fc       0xe2 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
- *fill*         0x000000004007a6de        0x2 
+                0x000000004007a600       0xe2 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+ *fill*         0x000000004007a6e2        0x2 
  .text.esp_rom_spiflash_enable_write
-                0x000000004007a6e0       0x39 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a6e4       0x39 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x3d (size before relaxing)
- *fill*         0x000000004007a719        0x3 
+ *fill*         0x000000004007a71d        0x3 
  .text.esp_rom_spiflash_program_page_internal
-                0x000000004007a71c       0xea /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a720       0xea /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0xee (size before relaxing)
- *fill*         0x000000004007a806        0x2 
+ *fill*         0x000000004007a80a        0x2 
  .text.esp_rom_spiflash_read_statushigh
-                0x000000004007a808       0x21 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x000000004007a808                esp_rom_spiflash_read_statushigh
- *fill*         0x000000004007a829        0x3 
+                0x000000004007a80c       0x21 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a80c                esp_rom_spiflash_read_statushigh
+ *fill*         0x000000004007a82d        0x3 
  .text.esp_rom_spiflash_write_status
-                0x000000004007a82c       0x34 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a830       0x34 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x38 (size before relaxing)
-                0x000000004007a82c                esp_rom_spiflash_write_status
+                0x000000004007a830                esp_rom_spiflash_write_status
  .text.esp_rom_spiflash_unlock
-                0x000000004007a860       0x6a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a864       0x6a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x7e (size before relaxing)
-                0x000000004007a860                esp_rom_spiflash_unlock
- *fill*         0x000000004007a8ca        0x2 
+                0x000000004007a864                esp_rom_spiflash_unlock
+ *fill*         0x000000004007a8ce        0x2 
  .text.esp_rom_spiflash_erase_sector
-                0x000000004007a8cc       0x61 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a8d0       0x61 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0x65 (size before relaxing)
-                0x000000004007a8cc                esp_rom_spiflash_erase_sector
- *fill*         0x000000004007a92d        0x3 
+                0x000000004007a8d0                esp_rom_spiflash_erase_sector
+ *fill*         0x000000004007a931        0x3 
  .text.esp_rom_spiflash_write
-                0x000000004007a930       0xc6 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a934       0xc6 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
                                          0xca (size before relaxing)
-                0x000000004007a930                esp_rom_spiflash_write
- *fill*         0x000000004007a9f6        0x2 
+                0x000000004007a934                esp_rom_spiflash_write
+ *fill*         0x000000004007a9fa        0x2 
  .text.esp_rom_spiflash_write_encrypted
-                0x000000004007a9f8       0x5a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x000000004007a9f8                esp_rom_spiflash_write_encrypted
- *fill*         0x000000004007aa52        0x2 
+                0x000000004007a9fc       0x5a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007a9fc                esp_rom_spiflash_write_encrypted
+ *fill*         0x000000004007aa56        0x2 
  .text.esp_rom_spiflash_read
-                0x000000004007aa54      0x284 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
-                0x000000004007aa54                esp_rom_spiflash_read
- *fill*         0x000000004007acd8        0x0 
- *fill*         0x000000004007acd8        0x0 
- *fill*         0x000000004007acd8        0x0 
- *fill*         0x000000004007acd8        0x0 
- *fill*         0x000000004007acd8        0x0 
- *fill*         0x000000004007acd8        0x0 
- *fill*         0x000000004007acd8        0x0 
- *fill*         0x000000004007acd8        0x0 
- *fill*         0x000000004007acd8        0x0 
- *fill*         0x000000004007acd8        0x0 
- *fill*         0x000000004007acd8        0x0 
+                0x000000004007aa58      0x284 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/spi_flash/libspi_flash.a(spi_flash_rom_patch.o)
+                0x000000004007aa58                esp_rom_spiflash_read
+ *fill*         0x000000004007acdc        0x0 
+ *fill*         0x000000004007acdc        0x0 
+ *fill*         0x000000004007acdc        0x0 
+ *fill*         0x000000004007acdc        0x0 
+ *fill*         0x000000004007acdc        0x0 
+ *fill*         0x000000004007acdc        0x0 
+ *fill*         0x000000004007acdc        0x0 
+ *fill*         0x000000004007acdc        0x0 
+ *fill*         0x000000004007acdc        0x0 
+ *fill*         0x000000004007acdc        0x0 
+ *fill*         0x000000004007acdc        0x0 
  *libsoc.a:rtc_wdt.*(.literal .text .literal.* .text.*)
  .text.rtc_wdt_get_protect_status
-                0x000000004007acd8       0x19 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007acd8                rtc_wdt_get_protect_status
- *fill*         0x000000004007acf1        0x3 
+                0x000000004007acdc       0x19 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007acdc                rtc_wdt_get_protect_status
+ *fill*         0x000000004007acf5        0x3 
  .text.rtc_wdt_protect_off
-                0x000000004007acf4       0x10 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007acf4                rtc_wdt_protect_off
+                0x000000004007acf8       0x10 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007acf8                rtc_wdt_protect_off
  .text.rtc_wdt_protect_on
-                0x000000004007ad04        0xf /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007ad04                rtc_wdt_protect_on
- *fill*         0x000000004007ad13        0x1 
+                0x000000004007ad08        0xf /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007ad08                rtc_wdt_protect_on
+ *fill*         0x000000004007ad17        0x1 
  .text.rtc_wdt_enable
-                0x000000004007ad14       0x2b /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007ad14                rtc_wdt_enable
- *fill*         0x000000004007ad3f        0x1 
+                0x000000004007ad18       0x2b /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007ad18                rtc_wdt_enable
+ *fill*         0x000000004007ad43        0x1 
  .text.rtc_wdt_set_time
-                0x000000004007ad40       0x59 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007ad44       0x59 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x5d (size before relaxing)
-                0x000000004007ad40                rtc_wdt_set_time
- *fill*         0x000000004007ad99        0x3 
+                0x000000004007ad44                rtc_wdt_set_time
+ *fill*         0x000000004007ad9d        0x3 
  .text.rtc_wdt_set_stage
-                0x000000004007ad9c       0xb1 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007ad9c                rtc_wdt_set_stage
- *fill*         0x000000004007ae4d        0x3 
+                0x000000004007ada0       0xb1 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007ada0                rtc_wdt_set_stage
+ *fill*         0x000000004007ae51        0x3 
  .text.rtc_wdt_disable
-                0x000000004007ae50       0x6a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007ae54       0x6a /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
                                          0x7e (size before relaxing)
-                0x000000004007ae50                rtc_wdt_disable
- *fill*         0x000000004007aeba        0x2 
+                0x000000004007ae54                rtc_wdt_disable
+ *fill*         0x000000004007aebe        0x2 
  .text.rtc_wdt_set_length_of_reset_signal
-                0x000000004007aebc       0x69 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
-                0x000000004007aebc                rtc_wdt_set_length_of_reset_signal
- *fill*         0x000000004007af25        0x0 
- *fill*         0x000000004007af25        0x0 
- *fill*         0x000000004007af25        0x0 
- *fill*         0x000000004007af25        0x0 
- *fill*         0x000000004007af25        0x0 
- *fill*         0x000000004007af25        0x0 
+                0x000000004007aec0       0x69 /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/soc/libsoc.a(rtc_wdt.o)
+                0x000000004007aec0                rtc_wdt_set_length_of_reset_signal
+ *fill*         0x000000004007af29        0x0 
+ *fill*         0x000000004007af29        0x0 
+ *fill*         0x000000004007af29        0x0 
+ *fill*         0x000000004007af29        0x0 
+ *fill*         0x000000004007af29        0x0 
+ *fill*         0x000000004007af29        0x0 
  *libefuse.a:*.*(.literal .text .literal.* .text.*)
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x000000004007af25                _loader_text_end = ABSOLUTE (.)
+                0x000000004007af29                _loader_text_end = ABSOLUTE (.)
 
 .iram.text      0x0000000040080400     0x1a31
                 0x0000000040080400                . = ALIGN (0x10)

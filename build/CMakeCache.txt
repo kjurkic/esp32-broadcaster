@@ -156,7 +156,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=app-template
+CMAKE_PROJECT_NAME:STATIC=esp32-broadcaster
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/home/kristian/.espressif/tools/xtensa-esp32-elf/1.22.0-80-g6c4433a-5.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-ranlib
@@ -276,6 +276,12 @@ esp-idf_BINARY_DIR:STATIC=/home/kristian/eclipse-workspace/esp32-broadcaster/bui
 
 //Value Computed by CMake
 esp-idf_SOURCE_DIR:STATIC=/home/kristian/esp/esp-idf
+
+//Value Computed by CMake
+esp32-broadcaster_BINARY_DIR:STATIC=/home/kristian/eclipse-workspace/esp32-broadcaster/build
+
+//Value Computed by CMake
+esp32-broadcaster_SOURCE_DIR:STATIC=/home/kristian/eclipse-workspace/esp32-broadcaster
 
 //Dependencies for the target
 idf_component_app_trace_LIB_DEPENDS:STATIC=general;gcov;

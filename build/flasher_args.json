@@ -9,19 +9,19 @@
     },
     "flash_files" : {
         "0x1000" : "bootloader/bootloader.bin",
-        "0x8000" : "partition_table/partition-table.bin",
+        "0x0" : "partition_table/partition-table.bin",
         "" : "",
         "" : "",
-        "0x10000" : "app-template.bin"
+        "0x10000" : "esp32-broadcaster.bin"
     },
     "bootloader" :      { "offset" : "0x1000",
                           "file" : "bootloader/bootloader.bin" },
-    "partition_table" : { "offset" : "0x8000",
+    "partition_table" : { "offset" : "0x0",
                           "file" : "partition_table/partition-table.bin" },
     "otadata" : { "offset" : "",
                   "file" : "" },
     "app" :             { "offset" : "0x10000",
-                          "file" : "app-template.bin" },
+                          "file" : "esp32-broadcaster.bin" },
     "extra_esptool_args" : {
         "after"  : "hard_reset",
         "before" : "default_reset"

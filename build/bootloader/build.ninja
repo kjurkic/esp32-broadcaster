@@ -283,7 +283,7 @@ build CMakeFiles/bootloader: phony bootloader.bin || bootloader.elf dummy_main_s
 # Custom command for bootloader.bin
 
 build bootloader.bin: CUSTOM_COMMAND bootloader.elf || bootloader.elf dummy_main_src esp-idf/bootloader_support/idf_component_bootloader_support_sections_info esp-idf/bootloader_support/libbootloader_support.a esp-idf/efuse/idf_component_efuse_sections_info esp-idf/efuse/libefuse.a esp-idf/log/idf_component_log_sections_info esp-idf/log/liblog.a esp-idf/main/idf_component_main_sections_info esp-idf/main/libmain.a esp-idf/micro-ecc/idf_component_micro-ecc_sections_info esp-idf/micro-ecc/libmicro-ecc.a esp-idf/soc/idf_component_soc_sections_info esp-idf/soc/libsoc.a esp-idf/spi_flash/idf_component_spi_flash_sections_info esp-idf/spi_flash/libspi_flash.a ldgen ldgen_section_infos
-  COMMAND = cd /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader && python /home/kristian/esp/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 40m --flash_size 2MB -o /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader.bin bootloader.elf
+  COMMAND = cd /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader && python /home/kristian/esp/esp-idf/components/esptool_py/esptool/esptool.py --chip esp32 elf2image --flash_mode dio --flash_freq 40m --flash_size 16MB -o /home/kristian/eclipse-workspace/esp32-broadcaster/build/bootloader/bootloader.bin bootloader.elf
   DESC = Generating bootloader.bin
   restat = 1
 

@@ -105,109 +105,109 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .literal.iterator_create 00000008  00000000  00000000  00000034  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  1 .literal.load_partitions 00000034  00000000  00000000  0000003c  2**2
+  1 .literal.load_partitions 00000030  00000000  00000000  0000003c  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  2 .literal.esp_partition_iterator_release 00000004  00000000  00000000  00000070  2**2
+  2 .literal.esp_partition_iterator_release 00000004  00000000  00000000  0000006c  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  3 .literal.esp_partition_next 00000028  00000000  00000000  00000074  2**2
+  3 .literal.esp_partition_next 00000028  00000000  00000000  00000070  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  4 .literal.esp_partition_find 0000001c  00000000  00000000  0000009c  2**2
+  4 .literal.esp_partition_find 0000001c  00000000  00000000  00000098  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  5 .literal.esp_partition_get 00000010  00000000  00000000  000000b8  2**2
+  5 .literal.esp_partition_get 00000010  00000000  00000000  000000b4  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  6 .literal.esp_partition_find_first 0000000c  00000000  00000000  000000c8  2**2
+  6 .literal.esp_partition_find_first 0000000c  00000000  00000000  000000c4  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  7 .literal.esp_partition_verify 00000024  00000000  00000000  000000d4  2**2
+  7 .literal.esp_partition_verify 00000024  00000000  00000000  000000d0  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  8 .literal.esp_partition_write 00000018  00000000  00000000  000000f8  2**2
+  8 .literal.esp_partition_write 00000018  00000000  00000000  000000f4  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  9 .literal.esp_partition_erase_range 00000014  00000000  00000000  00000110  2**2
+  9 .literal.esp_partition_erase_range 00000014  00000000  00000000  0000010c  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 10 .literal.esp_partition_mmap 00000018  00000000  00000000  00000124  2**2
+ 10 .literal.esp_partition_mmap 00000018  00000000  00000000  00000120  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 11 .literal.esp_partition_read 00000020  00000000  00000000  0000013c  2**2
+ 11 .literal.esp_partition_read 00000020  00000000  00000000  00000138  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 12 .literal.esp_partition_get_sha256 00000004  00000000  00000000  0000015c  2**2
+ 12 .literal.esp_partition_get_sha256 00000004  00000000  00000000  00000158  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 13 .literal.esp_partition_check_identity 00000010  00000000  00000000  00000160  2**2
+ 13 .literal.esp_partition_check_identity 00000010  00000000  00000000  0000015c  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 14 .text         00000000  00000000  00000000  00000170  2**0
+ 14 .text         00000000  00000000  00000000  0000016c  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 15 .data         00000000  00000000  00000000  00000170  2**0
+ 15 .data         00000000  00000000  00000000  0000016c  2**0
                   CONTENTS, ALLOC, LOAD, DATA
- 16 .bss          00000000  00000000  00000000  00000170  2**0
+ 16 .bss          00000000  00000000  00000000  0000016c  2**0
                   ALLOC
- 17 .text.iterator_create 00000021  00000000  00000000  00000170  2**2
+ 17 .text.iterator_create 00000021  00000000  00000000  0000016c  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 18 .text.load_partitions 000000da  00000000  00000000  00000194  2**2
+ 18 .text.load_partitions 000000d6  00000000  00000000  00000190  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 19 .text.esp_partition_iterator_release 0000000e  00000000  00000000  00000270  2**2
+ 19 .text.esp_partition_iterator_release 0000000e  00000000  00000000  00000268  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 20 .rodata.str1.4 00000066  00000000  00000000  00000280  2**2
+ 20 .rodata.str1.4 00000066  00000000  00000000  00000278  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
- 21 .text.esp_partition_next 00000082  00000000  00000000  000002e8  2**2
+ 21 .text.esp_partition_next 00000082  00000000  00000000  000002e0  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 22 .text.esp_partition_find 0000004e  00000000  00000000  0000036c  2**2
+ 22 .text.esp_partition_find 0000004e  00000000  00000000  00000364  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 23 .text.esp_partition_get 0000001c  00000000  00000000  000003bc  2**2
+ 23 .text.esp_partition_get 0000001c  00000000  00000000  000003b4  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 24 .text.esp_partition_find_first 0000002a  00000000  00000000  000003d8  2**2
+ 24 .text.esp_partition_find_first 0000002a  00000000  00000000  000003d0  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 25 .text.esp_partition_verify 0000007c  00000000  00000000  00000404  2**2
+ 25 .text.esp_partition_verify 0000007c  00000000  00000000  000003fc  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 26 .text.esp_partition_write 00000052  00000000  00000000  00000480  2**2
+ 26 .text.esp_partition_write 00000052  00000000  00000000  00000478  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 27 .text.esp_partition_erase_range 00000052  00000000  00000000  000004d4  2**2
+ 27 .text.esp_partition_erase_range 00000052  00000000  00000000  000004cc  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 28 .text.esp_partition_mmap 00000059  00000000  00000000  00000528  2**2
+ 28 .text.esp_partition_mmap 00000059  00000000  00000000  00000520  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 29 .text.esp_partition_read 00000076  00000000  00000000  00000584  2**2
+ 29 .text.esp_partition_read 00000076  00000000  00000000  0000057c  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 30 .text.esp_partition_get_sha256 00000015  00000000  00000000  000005fc  2**2
+ 30 .text.esp_partition_get_sha256 00000015  00000000  00000000  000005f4  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 31 .text.esp_partition_check_identity 00000048  00000000  00000000  00000614  2**2
+ 31 .text.esp_partition_check_identity 00000048  00000000  00000000  0000060c  2**2
                   CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
- 32 .rodata.__func__$3730 00000013  00000000  00000000  0000065c  2**2
+ 32 .rodata.__func__$3730 00000013  00000000  00000000  00000654  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
- 33 .rodata.__func__$3721 0000001a  00000000  00000000  00000670  2**2
+ 33 .rodata.__func__$3721 0000001a  00000000  00000000  00000668  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
- 34 .rodata.__func__$3715 00000014  00000000  00000000  0000068c  2**2
+ 34 .rodata.__func__$3715 00000014  00000000  00000000  00000684  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
- 35 .rodata.__func__$3705 00000013  00000000  00000000  000006a0  2**2
+ 35 .rodata.__func__$3705 00000013  00000000  00000000  00000698  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
- 36 .rodata.__func__$3692 00000015  00000000  00000000  000006b4  2**2
+ 36 .rodata.__func__$3692 00000015  00000000  00000000  000006ac  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
- 37 .rodata.__func__$3688 00000012  00000000  00000000  000006cc  2**2
+ 37 .rodata.__func__$3688 00000012  00000000  00000000  000006c4  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
- 38 .rodata.__func__$3651 00000013  00000000  00000000  000006e0  2**2
+ 38 .rodata.__func__$3651 00000013  00000000  00000000  000006d8  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
- 39 .bss.s_partition_list_lock 00000004  00000000  00000000  000006f4  2**2
+ 39 .bss.s_partition_list_lock 00000004  00000000  00000000  000006ec  2**2
                   ALLOC
- 40 .bss.s_partition_list 00000004  00000000  00000000  000006f4  2**2
+ 40 .bss.s_partition_list 00000004  00000000  00000000  000006ec  2**2
                   ALLOC
- 41 .debug_frame  00000160  00000000  00000000  000006f4  2**2
+ 41 .debug_frame  00000160  00000000  00000000  000006ec  2**2
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 42 .debug_info   00000ff8  00000000  00000000  00000854  2**0
+ 42 .debug_info   00000ffa  00000000  00000000  0000084c  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 43 .debug_abbrev 000002d2  00000000  00000000  0000184c  2**0
+ 43 .debug_abbrev 000002d2  00000000  00000000  00001846  2**0
                   CONTENTS, READONLY, DEBUGGING
- 44 .debug_loc    00000645  00000000  00000000  00001b1e  2**0
+ 44 .debug_loc    00000645  00000000  00000000  00001b18  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 45 .debug_aranges 00000088  00000000  00000000  00002163  2**0
+ 45 .debug_aranges 00000088  00000000  00000000  0000215d  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 46 .debug_ranges 000000a8  00000000  00000000  000021eb  2**0
+ 46 .debug_ranges 000000a8  00000000  00000000  000021e5  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 47 .debug_line   0000081b  00000000  00000000  00002293  2**0
+ 47 .debug_line   00000815  00000000  00000000  0000228d  2**0
                   CONTENTS, RELOC, READONLY, DEBUGGING
- 48 .debug_str    00000ad9  00000000  00000000  00002aae  2**0
+ 48 .debug_str    00000ad9  00000000  00000000  00002aa2  2**0
                   CONTENTS, READONLY, DEBUGGING
- 49 .comment      0000003b  00000000  00000000  00003587  2**0
+ 49 .comment      0000003b  00000000  00000000  0000357b  2**0
                   CONTENTS, READONLY
- 50 .xtensa.info  00000038  00000000  00000000  000035c2  2**0
+ 50 .xtensa.info  00000038  00000000  00000000  000035b6  2**0
                   CONTENTS, READONLY
- 51 .xt.lit       00000070  00000000  00000000  000035fa  2**0
+ 51 .xt.lit       00000070  00000000  00000000  000035ee  2**0
                   CONTENTS, RELOC, READONLY
- 52 .xt.prop      00000678  00000000  00000000  0000366a  2**0
+ 52 .xt.prop      00000678  00000000  00000000  0000365e  2**0
                   CONTENTS, RELOC, READONLY
 
 spi_flash_rom_patch.o:     file format elf32-xtensa-le
