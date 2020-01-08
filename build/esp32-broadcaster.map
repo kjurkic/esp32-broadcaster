@@ -27053,37 +27053,37 @@ END GROUP
                                          0xaa (size before relaxing)
  *fill*         0x000000003f403b5e        0x2 
  .rodata.str1.4
-                0x000000003f403b60      0x42f /home/kristian/eclipse-workspace/esp32-broadcaster/build/main/libmain.a(main.o)
- *fill*         0x000000003f403f8f        0x1 
- .rodata        0x000000003f403f90       0x3f /home/kristian/eclipse-workspace/esp32-broadcaster/build/main/libmain.a(main.o)
- *fill*         0x000000003f403fcf        0x1 
+                0x000000003f403b60      0x42b /home/kristian/eclipse-workspace/esp32-broadcaster/build/main/libmain.a(main.o)
+ *fill*         0x000000003f403f8b        0x1 
+ .rodata        0x000000003f403f8c       0x3f /home/kristian/eclipse-workspace/esp32-broadcaster/build/main/libmain.a(main.o)
+ *fill*         0x000000003f403fcb        0x1 
  .rodata.__func__$7774
-                0x000000003f403fd0        0x9 /home/kristian/eclipse-workspace/esp32-broadcaster/build/main/libmain.a(main.o)
- *fill*         0x000000003f403fd9        0x3 
+                0x000000003f403fcc        0x9 /home/kristian/eclipse-workspace/esp32-broadcaster/build/main/libmain.a(main.o)
+ *fill*         0x000000003f403fd5        0x3 
  .rodata.__func__$7750
-                0x000000003f403fdc        0xa /home/kristian/eclipse-workspace/esp32-broadcaster/build/main/libmain.a(main.o)
+                0x000000003f403fd8        0xa /home/kristian/eclipse-workspace/esp32-broadcaster/build/main/libmain.a(main.o)
  .rodata.str1.1
-                0x000000003f403fe6       0x3c /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
+                0x000000003f403fe2       0x3c /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-assert.o)
                                          0x3d (size before relaxing)
  .rodata.str1.1
-                0x000000003f404022       0x3c /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-puts.o)
+                0x000000003f40401e       0x3c /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-puts.o)
                                           0x2 (size before relaxing)
- *fill*         0x000000003f404022        0x2 
- .rodata        0x000000003f404024      0x2c0 /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
+ *fill*         0x000000003f40401e        0x2 
+ .rodata        0x000000003f404020      0x2c0 /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
  .rodata.str1.1
-                0x000000003f4042e4       0x32 /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
+                0x000000003f4042e0       0x32 /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-svfprintf.o)
                                          0x34 (size before relaxing)
- *fill*         0x000000003f404316        0x2 
- .rodata        0x000000003f404318      0x2c0 /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
+ *fill*         0x000000003f404312        0x2 
+ .rodata        0x000000003f404314      0x2c0 /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
  .rodata.str1.1
-                0x000000003f4045d8       0x22 /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
- .rodata        0x000000003f4045d8      0x2c0 /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
+                0x000000003f4045d4       0x22 /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfiprintf.o)
+ .rodata        0x000000003f4045d4      0x2c0 /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
  .rodata.str1.1
-                0x000000003f404898       0x34 /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
+                0x000000003f404894       0x34 /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-vfprintf.o)
  .rodata.str1.1
-                0x000000003f404898        0xd /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
+                0x000000003f404894        0xd /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-dtoa.o)
                                           0xf (size before relaxing)
- *fill*         0x000000003f4048a5        0x3 
+ *fill*         0x000000003f4048a1        0x7 
  .rodata        0x000000003f4048a8      0x128 /home/kristian/esp/esp-idf/components/newlib/lib/libc.a(lib_a-mprec.o)
                 0x000000003f4048b8                __mprec_tinytens
                 0x000000003f4048e0                __mprec_bigtens

@@ -65,11 +65,12 @@ void eddystone(){
 	{
 	    switch (event) {
 
-			case ESP_GAP_BLE_ADV_START_COMPLETE_EVT:
+	    	case ESP_GAP_BLE_ADV_START_COMPLETE_EVT:
 
-				ESP_LOGI(ESP32_TAG,"ESP_GAP_BLE_ADV_START_COMPLETE_EVT\n");
+				ESP_LOGI(ESP32_TAG,"CALLBACK ESP ADV START COMPLETE");
 				break;
-			default:
+
+	    	default:
 				break;
 		}
 	}
