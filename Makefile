@@ -4,4 +4,5 @@
 #
 
 PROJECT_NAME := esp32-broadcaster
+COMPONENT_ADD_INCLUDEDIRS := components/include
 include $(IDF_PATH)/make/project.mk
