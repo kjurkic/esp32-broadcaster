@@ -28,17 +28,17 @@ static const char *ESP32_TAG = "BROADCASTER"; // tag for log messages
 RTC_DATA_ATTR uint8_t sequence = 0; //sequence number saved in RTC so it can be used after wake up from deep sleep
 
 /**
- * @brief	Encrypt namespace and instance of Eddystone-UID
+ * @brief	Encrypt namespace and instance of Eddystone-UID.
  *
- * 			In this function AES-128 encryption is used.
- * 			First it converts the data from eddystone
- * 			data structure that is uint8_t to char and stores it
- * 			in an 16-byte array. Then it creates a aes context
- * 			structure, then initializes the aes context by passing
- * 			the address of context, then it sets the encryption key,
- * 			then it performs aes single-block encryption and then it
- * 			releases and clears the aes context. And last thing that
- * 			this function does is converting the data back to uint8_t.
+ * In this function AES-128 encryption is used.
+ * First it converts the data from eddystone
+ * data structure that is uint8_t to char and stores it
+ * in an 16-byte array. Then it creates a aes context
+ * structure, then initializes the aes context by passing
+ * the address of context, then it sets the encryption key,
+ * then it performs aes single-block encryption and then it
+ * releases and clears the aes context. And last thing that
+ * this function does is converting the data back to uint8_t.
  *
  * @param key: 128 bit key.
  * @param aes: aes context.
