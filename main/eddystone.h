@@ -59,21 +59,21 @@ uint32_t eddystone_len = 31; //length of Eddystone-UID packet
  */
 
 Eddystone eddystone_uid = { .length_flags = 0x02,
-			.flags_data_t = 0x01,
-			.flags_data = 0x06,
+				.flags_data_t = 0x01,
+				.flags_data = 0x06,
 
-			.length_uuid = 0x03,
-			.uuid_list = 0x03,
-			.eddystone_uuid_1 = { 0xAA, 0xFE },
+				.length_uuid = 0x03,
+				.uuid_list = 0x03,
+				.eddystone_uuid_1 = { 0xAA, 0xFE },
 
-			.length_service_d = 0x17,
-			.service_data_t = 0x16,
-			.eddystone_uuid = {0xAA, 0xFE },
-			.frame_type = 0x00,
-			.ranging_data = 0xEB,
-			.namespace_e = { 0x46, 0x45, 0x52, 0x49, 0x44, 0x53, 0x50, 0x4C, 0x41, 0x42 },
-			.instance = { 0x4B, 0x4A, 0x39, 0x35, 0x00, 0x2A },
-			.rfu = { 0x00, 0x00 }
+				.length_service_d = 0x17,
+				.service_data_t = 0x16,
+				.eddystone_uuid = {0xAA, 0xFE },
+				.frame_type = 0x00,
+				.ranging_data = 0xEB,
+				.namespace_e = { 0x46, 0x45, 0x52, 0x49, 0x44, 0x53, 0x50, 0x4C, 0x41, 0x42 },
+				.instance = { 0x4B, 0x4A, 0x39, 0x35, 0x00, 0x2A },
+				.rfu = { 0x00, 0x00 }
 };
 
 /**
@@ -86,11 +86,11 @@ Eddystone eddystone_uid = { .length_flags = 0x02,
  *
  */
 
-esp_ble_adv_params_t parameters = {.adv_int_min = 0x0020,
-							.adv_int_max = 0x0020,
-							.adv_type = 0x03,
-							.own_addr_type = 0x01,
-							.channel_map = 0x07
+esp_ble_adv_params_t parameters = { .adv_int_min = 0x0020,
+						.adv_int_max = 0x0020,
+						.adv_type = 0x03,
+						.own_addr_type = 0x01,
+						.channel_map = 0x07
 };
 
 
