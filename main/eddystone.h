@@ -10,8 +10,7 @@
 
 
 /**
- *@brief	Eddystone structure groups the core Bluetooth
- *			frame type and Eddystone-UID frame type.
+ *@brief Eddystone structure groups the core Bluetooth frame type and Eddystone-UID frame type.
  *
  */
 
@@ -36,29 +35,29 @@ typedef struct {
 uint32_t eddystone_len = 31; //length of Eddystone-UID packet
 
 /**
- * @brief	Setting all needed fields for a packet
- * 			to be in Eddystone-UID frame type.
+ * @brief Setting all needed fields for a packet to be in Eddystone-UID frame type.
  *
- * 			Length of field flags 2-bytes,
- * 			Value 0x01 defines that it is a flag due to Bluetooth Core Specification,
- * 			Value 0x06 defines that LE General Discoverable Mode is enabled and BR/EDR is not suported,
+ * Length of field flags 2-bytes,
+ * Value 0x01 defines that it is a flag due to Bluetooth Core Specification,
+ * Value 0x06 defines that LE General Discoverable Mode is enabled and BR/EDR is not suported,
  *
- * 			Length of field UUID 3-bytes,
- * 			Value 0x03 defines that it goes for Complete List of 16-bit Service Class UUIDs,
- * 			Value 0xFEAA defines Google Eddystone UUID,
+ * Length of field UUID 3-bytes,
+ * Value 0x03 defines that it goes for Complete List of 16-bit Service Class UUIDs,
+ * Value 0xFEAA defines Google Eddystone UUID,
  *
- * 			Length of field service data is 23-bytes,
- * 			Value 0x16 defines service data data type value,
- * 			Eddystone UUID 0xFEAA,
- * 			Value 0x00 defines that this is a UID frame type,
- * 			Value 0xEB defines Tx power at 0m to -21dBm,
- * 			Namespace in this case if we convert ASCII to characters:
- * 			F E R I D S P L A B
- * 			Instance in this case if we convert ASCII to characters:
- * 			K J 9 5 0 *
- * 			Rfu must be 0x0000 and is reserved for future use.
+ * Length of field service data is 23-bytes,
+ * Value 0x16 defines service data data type value,
+ * Eddystone UUID 0xFEAA,
+ * Value 0x00 defines that this is a UID frame type,
+ * Value 0xEB defines Tx power at 0m to -21dBm,
+ * Namespace in this case if we convert ASCII to characters:
+ * F E R I D S P L A B
+ * Instance in this case if we convert ASCII to characters:
+ * K J 9 5 0 *
+ * Rfu must be 0x0000 and is reserved for future use.
  *
  */
+
 Eddystone eddystone_uid = {.length_flags = 0x02,
 		.flags_data_t = 0x01,
 		.flags_data = 0x06,
@@ -78,14 +77,15 @@ Eddystone eddystone_uid = {.length_flags = 0x02,
 };
 
 /**
- * @brief	Setting advertisement parameters
+ * @brief Setting advertisement parameters
  *
- * 			Advertising interval (min and max) 20ms,
- * 			Advertising type non-connectable,
- * 			Address type random,
- * 			Advertising on all channels.
+ * Advertising interval (min and max) 20ms,
+ * Advertising type non-connectable,
+ * Address type random,
+ * Advertising on all channels.
  *
  */
+
 esp_ble_adv_params_t parameters = {.adv_int_min = 0x0020,
 		.adv_int_max = 0x0020,
 		.adv_type = 0x03,
