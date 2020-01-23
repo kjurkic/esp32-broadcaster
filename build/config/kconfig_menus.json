@@ -2424,10 +2424,7 @@
                                         "help": "Maximum number of devices which can be recorded in scan duplicate filter.\nWhen the maximum amount of device in the filter is reached, the cache will be refreshed.", 
                                         "id": "BTDM_SCAN_DUPL_CACHE_SIZE", 
                                         "name": "BTDM_SCAN_DUPL_CACHE_SIZE", 
-                                        "range": [
-                                            10, 
-                                            1000
-                                        ], 
+                                        "range": null, 
                                         "title": "Maximum number of devices in scan duplicate filter", 
                                         "type": "int"
                                     }, 
@@ -9034,10 +9031,7 @@
                                 "help": "Set the size of WiFi Block Ack TX window. Generally a bigger value means higher throughput but\nmore memory. Most of time we should NOT change the default value unless special reason, e.g.\ntest the maximum UDP TX throughput with iperf etc. For iperf test in shieldbox, the recommended\nvalue is 9~12.", 
                                 "id": "ESP32_WIFI_TX_BA_WIN", 
                                 "name": "ESP32_WIFI_TX_BA_WIN", 
-                                "range": [
-                                    2, 
-                                    32
-                                ], 
+                                "range": null, 
                                 "title": "WiFi AMPDU TX BA window size", 
                                 "type": "int"
                             }
@@ -9058,10 +9052,7 @@
                                 "help": "Set the size of WiFi Block Ack RX window. Generally a bigger value means higher throughput and better\ncompatibility but more memory. Most of time we should NOT change the default value unless special\nreason, e.g. test the maximum UDP RX throughput with iperf etc. For iperf test in shieldbox, the\nrecommended value is 9~12. If PSRAM is used and WiFi memory is prefered to allocat in PSRAM first,\nthe default and minimum value should be 16 to achieve better throughput and compatibility with both\nstations and APs.", 
                                 "id": "ESP32_WIFI_RX_BA_WIN", 
                                 "name": "ESP32_WIFI_RX_BA_WIN", 
-                                "range": [
-                                    2, 
-                                    32
-                                ], 
+                                "range": null, 
                                 "title": "WiFi AMPDU RX BA window size", 
                                 "type": "int"
                             }

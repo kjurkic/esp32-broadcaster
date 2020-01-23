@@ -3320,7 +3320,7 @@ LOAD /home/kristian/.espressif/tools/xtensa-esp32-elf/esp-2019r2-8.2.0/xtensa-es
  *fill*         0x0000000040080979        0x3 
  .text.bootloader_check_rated_cpu_clock
                 0x000000004008097c       0x2d esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32.c.obj)
-                                         0x35 (size before relaxing)
+                                         0x31 (size before relaxing)
  *fill*         0x00000000400809a9        0x3 
  .text.print_flash_info
                 0x00000000400809ac       0xf3 esp-idf/bootloader_support/libbootloader_support.a(bootloader_esp32.c.obj)
