@@ -23,7 +23,7 @@
 #include "mbedtls/aes.h"
 #include "eddystone.h"
 
-static const char* ESP32_TAG = "BROADCASTER"; // tag for log messages
+static const char *ESP32_TAG = "BROADCASTER"; // tag for log messages
 
 RTC_DATA_ATTR uint8_t sequence = 0; //sequence number saved in RTC so it can be used after wake up from deep sleep
 
@@ -47,14 +47,16 @@ RTC_DATA_ATTR uint8_t sequence = 0; //sequence number saved in RTC so it can be 
  *
  */
 
-void aes(){
-	unsigned char key[16] = {'B', '?', 'D', '(', 'G', '+', 'K', 'b', 'P', 'e', 'S', 'h', 'V', 'm', 'Y', 'q'};
+void aes() {
+	unsigned char key[16] = { 'B', '?', 'D', '(', 'G', '+', 'K', 'b', 'P', 'e',
+			'S', 'h', 'V', 'm', 'Y', 'q' };
 	unsigned char eddystone_uidchar[16];
 	unsigned char eddystone_uidchar_e[16];
 
 	for (int i = 0; i < 16; i++) {
 		if (i > 9) {
-			eddystone_uidchar[i] = (unsigned char) eddystone_uid.instance[i-10];
+			eddystone_uidchar[i] =
+					(unsigned char) eddystone_uid.instance[i - 10];
 		} else {
 			eddystone_uidchar[i] = (unsigned char) eddystone_uid.namespace_e[i];
 		}
@@ -63,14 +65,15 @@ void aes(){
 	mbedtls_aes_context aes;
 	mbedtls_aes_init(&aes);
 	mbedtls_aes_setkey_enc(&aes, key, 128);
-	mbedtls_aes_crypt_ecb(&aes, MBEDTLS_AES_ENCRYPT,eddystone_uidchar,eddystone_uidchar_e);
+	mbedtls_aes_crypt_ecb(&aes, MBEDTLS_AES_ENCRYPT, eddystone_uidchar,
+			eddystone_uidchar_e);
 	mbedtls_aes_free(&aes);
 
 	for (int i = 0; i < 16; i++) {
 		if (i > 9) {
-			eddystone_uid.instance[i-10] = (uint8_t)eddystone_uidchar_e[i];
+			eddystone_uid.instance[i - 10] = (uint8_t) eddystone_uidchar_e[i];
 		} else {
-			eddystone_uid.namespace_e[i] = (uint8_t)eddystone_uidchar_e[i];
+			eddystone_uid.namespace_e[i] = (uint8_t) eddystone_uidchar_e[i];
 		}
 	}
 
@@ -87,88 +90,90 @@ void aes(){
  *
  */
 
-void esp_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param)
-{
+void esp_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) {
 	esp_err_t err; // error type variable
 
-    switch (event) {
+	switch (event) {
 
-    	/**
-    	 * @brief					GAP event local privacy complete and
-    	 * 							setting advertising data.
-    	 *
-    	 * 							After local privacy is set it sets sequence
-    	 * 							number to instance[4] of eddystone structure.
-    	 * 							Then it encrypts the data by calling the aes function,
-    	 * 							after data is encrypted it calls
-    	 * 							esp_ble_gap_config_adv_data_raw to set the data and
-    	 * 							check if it was successful if not it prints a log error
-    	 * 							with error code.
-    	 *
-    	 * @param  &eddystone_uid:	address of eddystone_uid structure.
-    	 * @param  eddystone_len:	length of data structure.
-    	 *
-    	 * @return 					ESP_OK if advertising data successfully set.
-    	 *
-    	 */
+	/**
+	 * @brief					GAP event local privacy complete and
+	 * 							setting advertising data.
+	 *
+	 * 							After local privacy is set it sets sequence
+	 * 							number to instance[4] of eddystone structure.
+	 * 							Then it encrypts the data by calling the aes function,
+	 * 							after data is encrypted it calls
+	 * 							esp_ble_gap_config_adv_data_raw to set the data and
+	 * 							check if it was successful if not it prints a log error
+	 * 							with error code.
+	 *
+	 * @param  &eddystone_uid:	address of eddystone_uid structure.
+	 * @param  eddystone_len:	length of data structure.
+	 *
+	 * @return 					ESP_OK if advertising data successfully set.
+	 *
+	 */
 
-    	case ESP_GAP_BLE_SET_LOCAL_PRIVACY_COMPLETE_EVT :
-    		ESP_LOGI(ESP32_TAG,"Local privacy set complete.");
-    		eddystone_uid.instance[4] = sequence;
-    		aes();
-    		err = esp_ble_gap_config_adv_data_raw(&eddystone_uid,eddystone_len);
-    		if (err != ESP_OK){
-    			ESP_LOGE(ESP32_TAG, "Failed to set advertising data ERROR: %s", esp_err_to_name(err));
-    		}
-    		break;
+	case ESP_GAP_BLE_SET_LOCAL_PRIVACY_COMPLETE_EVT:
+		ESP_LOGI(ESP32_TAG, "Local privacy set complete.");
+		eddystone_uid.instance[4] = sequence;
+		aes();
+		err = esp_ble_gap_config_adv_data_raw(&eddystone_uid, eddystone_len);
+		if (err != ESP_OK) {
+			ESP_LOGE(ESP32_TAG, "Failed to set advertising data ERROR: %s",
+					esp_err_to_name(err));
+		}
+		break;
 
-    	/**
-    	 * @brief				GAP event advertising data set complete
-    	 * 						and start advertising.
-    	 *
-    	 * 						After advertising data is set it increases
-    	 * 						sequence number, and calls esp_gap_start_advertising
-    	 * 						function to start with advertising. Then it checks if
-    	 * 						advertising is started correctly if not, prints an error
-    	 * 						log with error code.
-    	 *
-    	 * 	@param &parameters: address of esp_ble_adv_params_t structure.
-    	 *
-    	 * 	@return				ESP_OK if advertising started successfully.
-    	 *
-    	 */
+		/**
+		 * @brief				GAP event advertising data set complete
+		 * 						and start advertising.
+		 *
+		 * 						After advertising data is set it increases
+		 * 						sequence number, and calls esp_gap_start_advertising
+		 * 						function to start with advertising. Then it checks if
+		 * 						advertising is started correctly if not, prints an error
+		 * 						log with error code.
+		 *
+		 * 	@param &parameters: address of esp_ble_adv_params_t structure.
+		 *
+		 * 	@return				ESP_OK if advertising started successfully.
+		 *
+		 */
 
-    	case  ESP_GAP_BLE_ADV_DATA_RAW_SET_COMPLETE_EVT :
-    		ESP_LOGI(ESP32_TAG,"Advertising data set complete.");
-    		sequence++;
-    		if (sequence == 255) {
-    			sequence = 0;
-    		}
-    		err = esp_ble_gap_start_advertising(&parameters);
-    		if (err != ESP_OK) {
-    			ESP_LOGE(ESP32_TAG, "Failed to start advertising ERROR: %s", esp_err_to_name(err));
-    		}
-    		break;
+	case ESP_GAP_BLE_ADV_DATA_RAW_SET_COMPLETE_EVT:
+		ESP_LOGI(ESP32_TAG, "Advertising data set complete.");
+		sequence++;
+		if (sequence == 255) {
+			sequence = 0;
+		}
+		err = esp_ble_gap_start_advertising(&parameters);
+		if (err != ESP_OK) {
+			ESP_LOGE(ESP32_TAG, "Failed to start advertising ERROR: %s",
+					esp_err_to_name(err));
+		}
+		break;
 
-    	/**
-    	 * @brief		GAP event starting advertising complete.
-    	 *
-    	 * 				After advertisement started and sends an
-    	 * 				packet then it calls esp_ble_gap_stop_advertising
-    	 * 				function to stop advertising. Checks if stop advertising
-    	 * 				was successful if not prints an log error with error code.
-    	 *
-    	 * 	@return		ESP_OK if advertising stopped successfully.
-    	 *
-    	 */
+		/**
+		 * @brief		GAP event starting advertising complete.
+		 *
+		 * 				After advertisement started and sends an
+		 * 				packet then it calls esp_ble_gap_stop_advertising
+		 * 				function to stop advertising. Checks if stop advertising
+		 * 				was successful if not prints an log error with error code.
+		 *
+		 * 	@return		ESP_OK if advertising stopped successfully.
+		 *
+		 */
 
-    	case ESP_GAP_BLE_ADV_START_COMPLETE_EVT:
-    		ESP_LOGI(ESP32_TAG, "Advertising started.");
-			err = esp_ble_gap_stop_advertising();
-			if (err != ESP_OK) {
-				ESP_LOGE(ESP32_TAG, "Failed to stop advertising ERROR: %s", esp_err_to_name(err));
-			}
-			break;
+	case ESP_GAP_BLE_ADV_START_COMPLETE_EVT:
+		ESP_LOGI(ESP32_TAG, "Advertising started.");
+		err = esp_ble_gap_stop_advertising();
+		if (err != ESP_OK) {
+			ESP_LOGE(ESP32_TAG, "Failed to stop advertising ERROR: %s",
+					esp_err_to_name(err));
+		}
+		break;
 
 		/**
 		 * @brief 		GAP event advertising stopped and entering
@@ -185,17 +190,18 @@ void esp_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param)
 		 *
 		 */
 
-    	case ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT:
-    		ESP_LOGI(ESP32_TAG,"Advertising stopped.");
-			err = esp_sleep_enable_timer_wakeup(10000000);
-			if (err != ESP_OK) {
-				ESP_LOGE(ESP32_TAG, "Failed to set wake up timer ERROR: %s", esp_err_to_name(err));
-			}
-			esp_deep_sleep_start();
-			break;
+	case ESP_GAP_BLE_ADV_STOP_COMPLETE_EVT:
+		ESP_LOGI(ESP32_TAG, "Advertising stopped.");
+		err = esp_sleep_enable_timer_wakeup(10000000);
+		if (err != ESP_OK) {
+			ESP_LOGE(ESP32_TAG, "Failed to set wake up timer ERROR: %s",
+					esp_err_to_name(err));
+		}
+		esp_deep_sleep_start();
+		break;
 
-    	default:
-			break;
+	default:
+		break;
 
 	}
 }
@@ -206,7 +212,7 @@ void esp_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param)
  *
  */
 
-void eddystone(){
+void eddystone() {
 
 	esp_err_t err; // error type variable
 
@@ -223,7 +229,8 @@ void eddystone(){
 
 	err = nvs_flash_init();
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG, "Failed to initialize NVS partition ERROR: %s", esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG, "Failed to initialize NVS partition ERROR: %s",
+				esp_err_to_name(err));
 	} else {
 		ESP_LOGI(ESP32_TAG, "Successfully initialized NVS partition.");
 	}
@@ -242,7 +249,8 @@ void eddystone(){
 
 	err = esp_bt_controller_mem_release(ESP_BT_MODE_CLASSIC_BT);
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG, "Failed to release controller memory ERROR: %s", esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG, "Failed to release controller memory ERROR: %s",
+				esp_err_to_name(err));
 	} else {
 		ESP_LOGI(ESP32_TAG, "Successfully released controller memory.");
 	}
@@ -271,7 +279,8 @@ void eddystone(){
 
 	err = esp_bt_controller_init(&config);
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG, "Controller failed to initialize  ERROR: %s", esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG, "Controller failed to initialize  ERROR: %s",
+				esp_err_to_name(err));
 	} else {
 		ESP_LOGI(ESP32_TAG, "Controller successfully initialized.");
 	}
@@ -291,7 +300,8 @@ void eddystone(){
 
 	err = esp_bt_controller_enable(ESP_BT_MODE_BLE);
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG, "Failed to enable BLE mode ERROR: %s", esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG, "Failed to enable BLE mode ERROR: %s",
+				esp_err_to_name(err));
 	} else {
 		ESP_LOGI(ESP32_TAG, "Successfully enabled BLE mode.");
 	}
@@ -310,9 +320,12 @@ void eddystone(){
 
 	err = esp_bluedroid_init();
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG, "Failed to initialize and allocate resource for BT ERROR: %s", esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG,
+				"Failed to initialize and allocate resource for BT ERROR: %s",
+				esp_err_to_name(err));
 	} else {
-		ESP_LOGI(ESP32_TAG, "Successfully initialized and allocated resource for BT.");
+		ESP_LOGI(ESP32_TAG,
+				"Successfully initialized and allocated resource for BT.");
 	}
 
 	/**
@@ -328,7 +341,8 @@ void eddystone(){
 
 	err = esp_bluedroid_enable();
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG, "Failed to enable BT ERROR: %s", esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG, "Failed to enable BT ERROR: %s",
+				esp_err_to_name(err));
 	} else {
 		ESP_LOGI(ESP32_TAG, "Successfully enabled BT.");
 	}
@@ -350,9 +364,12 @@ void eddystone(){
 
 	err = esp_ble_gap_register_callback(esp_cb);
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG, "Failed to set callback function that occurs GAP event ERROR: %s", esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG,
+				"Failed to set callback function that occurs GAP event ERROR: %s",
+				esp_err_to_name(err));
 	} else {
-		ESP_LOGI(ESP32_TAG, "Callback function that occurs GAP event set successfully.");
+		ESP_LOGI(ESP32_TAG,
+				"Callback function that occurs GAP event set successfully.");
 	}
 
 	/**
@@ -372,9 +389,9 @@ void eddystone(){
 
 	err = esp_ble_gap_config_local_privacy(true);
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG, "Failed to set local privacy ERROR: %s", esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG, "Failed to set local privacy ERROR: %s",
+				esp_err_to_name(err));
 	}
 }
-
 
 #endif /* MAIN_BLE_H_ */
