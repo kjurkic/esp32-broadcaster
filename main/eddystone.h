@@ -66,6 +66,7 @@ Eddystone eddystone_uid = {
 		.length_uuid = 0x03,
 		.uuid_list = 0x03,
 		.eddystone_uuid_1 = { 0xAA, 0xFE },
+
 		.length_service_d = 0x17,
 		.service_data_t = 0x16,
 		.eddystone_uuid = {0xAA, 0xFE },
