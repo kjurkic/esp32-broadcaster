@@ -29,27 +29,25 @@ RTC_DATA_ATTR uint8_t sequence = 0; //sequence number saved in RTC so it can be 
 
 /**
  * @brief						Encrypt namespace and instance of Eddystone-UID
+ * 						In this function AES-128 encryption is used.
+ * 						First it converts the data from eddystone
+ * 						data structure that is uint8_t to char and stores it
+ * 						in an 16-byte array. Then it creates a aes context
+ * 						structure, then initializes the aes context by passing
+ * 						the address of context, then it sets the encryption key,
+ * 						then it performs aes single-block encryption and then it
+ * 						releases and clears the aes context. And last thing that
+ * 						this function does is converting the data back to uint8_t.
  *
- * 								In this function AES-128 encryption is used.
- * 								First it converts the data from eddystone
- * 								data structure that is uint8_t to char and stores it
- * 								in an 16-byte array. Then it creates a aes context
- * 								structure, then initializes the aes context by passing
- * 								the address of context, then it sets the encryption key,
- * 								then it performs aes single-block encryption and then it
- * 								releases and clears the aes context. And last thing that
- * 								this function does is converting the data back to uint8_t.
- *
- * @param key:					128 bit key.
- * @param aes:					aes context.
- * @param eddystone_uidchar:	plain input array.
- * @param eddystone_uidchar_e:	encrypted output array.
+ * @param key:						128 bit key.
+ * @param aes:						aes context.
+ * @param eddystone_uidchar:				plain input array.
+ * @param eddystone_uidchar_e:				encrypted output array.
  *
  */
 
 void aes() {
-	unsigned char key[16] = { 'B', '?', 'D', '(', 'G', '+', 'K', 'b', 'P', 'e',
-			'S', 'h', 'V', 'm', 'Y', 'q' };
+	unsigned char key[16] = { 'B', '?', 'D', '(', 'G', '+', 'K', 'b', 'P', 'e', 'S', 'h', 'V', 'm', 'Y', 'q' };
 	unsigned char eddystone_uidchar[16];
 	unsigned char eddystone_uidchar_e[16];
 
@@ -82,11 +80,11 @@ void aes() {
 /**
  * @brief			GAP callback function.
  *
- * 					When an gap event occurs this function is called.
- * 					After an event occurs it is processed.
+ * 			When an gap event occurs this function is called.
+ * 			After an event occurs it is processed.
  *
- * @param	event:	type of GAP event.
- * @param	param:  pointer to parameter of callback.
+ * @param	event:			type of GAP event.
+ * @param	param:			pointer to parameter of callback.
  *
  */
 
@@ -96,21 +94,21 @@ void esp_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) {
 	switch (event) {
 
 	/**
-	 * @brief					GAP event local privacy complete and
-	 * 							setting advertising data.
+	 *@brief					GAP event local privacy complete and
+	 * 					setting advertising data.
 	 *
-	 * 							After local privacy is set it sets sequence
-	 * 							number to instance[4] of eddystone structure.
-	 * 							Then it encrypts the data by calling the aes function,
-	 * 							after data is encrypted it calls
-	 * 							esp_ble_gap_config_adv_data_raw to set the data and
-	 * 							check if it was successful if not it prints a log error
-	 * 							with error code.
+	 * 					After local privacy is set it sets sequence
+	 * 					number to instance[4] of eddystone structure.
+	 * 					Then it encrypts the data by calling the aes function,
+	 * 					after data is encrypted it calls
+	 * 					esp_ble_gap_config_adv_data_raw to set the data and
+	 * 					check if it was successful if not it prints a log error
+	 * 					with error code.
 	 *
-	 * @param  &eddystone_uid:	address of eddystone_uid structure.
-	 * @param  eddystone_len:	length of data structure.
+	 * @param  &eddystone_uid:			address of eddystone_uid structure.
+	 * @param  eddystone_len:			length of data structure.
 	 *
-	 * @return 					ESP_OK if advertising data successfully set.
+	 * @return					ESP_OK if advertising data successfully set.
 	 *
 	 */
 
@@ -126,18 +124,18 @@ void esp_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) {
 		break;
 
 		/**
-		 * @brief				GAP event advertising data set complete
-		 * 						and start advertising.
+		 *@brief				GAP event advertising data set complete
+		 *				and start advertising.
 		 *
-		 * 						After advertising data is set it increases
-		 * 						sequence number, and calls esp_gap_start_advertising
-		 * 						function to start with advertising. Then it checks if
-		 * 						advertising is started correctly if not, prints an error
-		 * 						log with error code.
+		 * 				After advertising data is set it increases
+		 * 				sequence number, and calls esp_gap_start_advertising
+		 * 				function to start with advertising. Then it checks if
+		 * 				advertising is started correctly if not, prints an error
+		 * 				log with error code.
 		 *
-		 * 	@param &parameters: address of esp_ble_adv_params_t structure.
+		 *@param &parameters:			address of esp_ble_adv_params_t structure.
 		 *
-		 * 	@return				ESP_OK if advertising started successfully.
+		 *@return				ESP_OK if advertising started successfully.
 		 *
 		 */
 
@@ -155,14 +153,14 @@ void esp_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) {
 		break;
 
 		/**
-		 * @brief		GAP event starting advertising complete.
+		 *@brief		GAP event starting advertising complete.
 		 *
 		 * 				After advertisement started and sends an
 		 * 				packet then it calls esp_ble_gap_stop_advertising
 		 * 				function to stop advertising. Checks if stop advertising
 		 * 				was successful if not prints an log error with error code.
 		 *
-		 * 	@return		ESP_OK if advertising stopped successfully.
+		 *@return		ESP_OK if advertising stopped successfully.
 		 *
 		 */
 
@@ -176,17 +174,17 @@ void esp_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) {
 		break;
 
 		/**
-		 * @brief 		GAP event advertising stopped and entering
-		 * 				deep sleep.
+		 *@brief		GAP event advertising stopped and entering
+		 *				deep sleep.
 		 *
-		 * 				After advertising stopped successfully it
-		 * 				enters deep sleep mode for 10 seconds.
+		 *				After advertising stopped successfully it
+		 *				enters deep sleep mode for 10 seconds.
 		 * 				Check if wake up time set correctly if not
 		 * 				prints log error with error code.
 		 *
-		 * @param  us:	time before wake up in microseconds.
+		 *@param  us:	time before wake up in microseconds.
 		 *
-		 * @return 		ESP_OK if successfully set.
+		 *@return		ESP_OK if successfully set.
 		 *
 		 */
 
@@ -207,7 +205,7 @@ void esp_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) {
 }
 
 /**
- * @brief	This function is called to process all needed steps
+ *@brief	This function is called to process all needed steps
  * 			to start advertising BLE Eddystone-UID packets.
  *
  */
@@ -294,7 +292,7 @@ void eddystone() {
 	 *
 	 * @param  ESP_BT_MODE_BLE:	value of ESP_BT_MODE_BLE is 1 and defines BLE mode.
 	 *
-	 * @return 					ESP_OK if BT controller is successfully enabled.
+	 * @return					ESP_OK if BT controller is successfully enabled.
 	 *
 	 */
 
