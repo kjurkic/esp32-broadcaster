@@ -54,8 +54,7 @@ void aes() {
 
 	for (int i = 0; i < 16; i++) {
 		if (i > 9) {
-			eddystone_uidchar[i] =
-					(unsigned char) eddystone_uid.instance[i - 10];
+			eddystone_uidchar[i] = (unsigned char) eddystone_uid.instance[i - 10];
 		} else {
 			eddystone_uidchar[i] = (unsigned char) eddystone_uid.namespace_e[i];
 		}
@@ -118,8 +117,7 @@ void esp_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) {
 		aes();
 		err = esp_ble_gap_config_adv_data_raw(&eddystone_uid, eddystone_len);
 		if (err != ESP_OK) {
-			ESP_LOGE(ESP32_TAG, "Failed to set advertising data ERROR: %s",
-					esp_err_to_name(err));
+			ESP_LOGE(ESP32_TAG, "Failed to set advertising data ERROR: %s", esp_err_to_name(err));
 		}
 		break;
 
@@ -146,8 +144,7 @@ void esp_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) {
 		}
 		err = esp_ble_gap_start_advertising(&parameters);
 		if (err != ESP_OK) {
-			ESP_LOGE(ESP32_TAG, "Failed to start advertising ERROR: %s",
-					esp_err_to_name(err));
+			ESP_LOGE(ESP32_TAG, "Failed to start advertising ERROR: %s", esp_err_to_name(err));
 		}
 		break;
 
@@ -167,8 +164,7 @@ void esp_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) {
 		ESP_LOGI(ESP32_TAG, "Advertising started.");
 		err = esp_ble_gap_stop_advertising();
 		if (err != ESP_OK) {
-			ESP_LOGE(ESP32_TAG, "Failed to stop advertising ERROR: %s",
-					esp_err_to_name(err));
+			ESP_LOGE(ESP32_TAG, "Failed to stop advertising ERROR: %s", esp_err_to_name(err));
 		}
 		break;
 
@@ -190,8 +186,7 @@ void esp_cb(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param) {
 		ESP_LOGI(ESP32_TAG, "Advertising stopped.");
 		err = esp_sleep_enable_timer_wakeup(10000000);
 		if (err != ESP_OK) {
-			ESP_LOGE(ESP32_TAG, "Failed to set wake up timer ERROR: %s",
-					esp_err_to_name(err));
+			ESP_LOGE(ESP32_TAG, "Failed to set wake up timer ERROR: %s", esp_err_to_name(err));
 		}
 		esp_deep_sleep_start();
 		break;
@@ -224,8 +219,7 @@ void eddystone() {
 
 	err = nvs_flash_init();
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG, "Failed to initialize NVS partition ERROR: %s",
-				esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG, "Failed to initialize NVS partition ERROR: %s", esp_err_to_name(err));
 	} else {
 		ESP_LOGI(ESP32_TAG, "Successfully initialized NVS partition.");
 	}
@@ -244,8 +238,7 @@ void eddystone() {
 
 	err = esp_bt_controller_mem_release(ESP_BT_MODE_CLASSIC_BT);
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG, "Failed to release controller memory ERROR: %s",
-				esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG, "Failed to release controller memory ERROR: %s", esp_err_to_name(err));
 	} else {
 		ESP_LOGI(ESP32_TAG, "Successfully released controller memory.");
 	}
@@ -274,8 +267,7 @@ void eddystone() {
 
 	err = esp_bt_controller_init(&config);
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG, "Controller failed to initialize  ERROR: %s",
-				esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG, "Controller failed to initialize  ERROR: %s", esp_err_to_name(err));
 	} else {
 		ESP_LOGI(ESP32_TAG, "Controller successfully initialized.");
 	}
@@ -295,8 +287,7 @@ void eddystone() {
 
 	err = esp_bt_controller_enable(ESP_BT_MODE_BLE);
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG, "Failed to enable BLE mode ERROR: %s",
-				esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG, "Failed to enable BLE mode ERROR: %s", esp_err_to_name(err));
 	} else {
 		ESP_LOGI(ESP32_TAG, "Successfully enabled BLE mode.");
 	}
@@ -315,12 +306,9 @@ void eddystone() {
 
 	err = esp_bluedroid_init();
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG,
-				"Failed to initialize and allocate resource for BT ERROR: %s",
-				esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG, "Failed to initialize and allocate resource for BT ERROR: %s", esp_err_to_name(err));
 	} else {
-		ESP_LOGI(ESP32_TAG,
-				"Successfully initialized and allocated resource for BT.");
+		ESP_LOGI(ESP32_TAG, "Successfully initialized and allocated resource for BT.");
 	}
 
 	/**
@@ -336,8 +324,7 @@ void eddystone() {
 
 	err = esp_bluedroid_enable();
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG, "Failed to enable BT ERROR: %s",
-				esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG, "Failed to enable BT ERROR: %s", esp_err_to_name(err));
 	} else {
 		ESP_LOGI(ESP32_TAG, "Successfully enabled BT.");
 	}
@@ -359,12 +346,9 @@ void eddystone() {
 
 	err = esp_ble_gap_register_callback(esp_cb);
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG,
-				"Failed to set callback function that occurs GAP event ERROR: %s",
-				esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG, "Failed to set callback function that occurs GAP event ERROR: %s", esp_err_to_name(err));
 	} else {
-		ESP_LOGI(ESP32_TAG,
-				"Callback function that occurs GAP event set successfully.");
+		ESP_LOGI(ESP32_TAG, "Callback function that occurs GAP event set successfully.");
 	}
 
 	/**
@@ -384,8 +368,7 @@ void eddystone() {
 
 	err = esp_ble_gap_config_local_privacy(true);
 	if (err != ESP_OK) {
-		ESP_LOGE(ESP32_TAG, "Failed to set local privacy ERROR: %s",
-				esp_err_to_name(err));
+		ESP_LOGE(ESP32_TAG, "Failed to set local privacy ERROR: %s", esp_err_to_name(err));
 	}
 }
 
